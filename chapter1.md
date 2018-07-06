@@ -34,10 +34,12 @@ The code to import the `numpy` library has already been written for you as an ex
 
 `@sample_code`
 ```{python}
-#Import numpy library
+#Lines beggining with # symbol are called commments and are ignored when the code is run
+#They can be used to decribe in plain english what the code is doing
+#Import numpy library and label it np
 import numpy as np
 
-#Import pandas library
+#Import pandas library and label it pd
 import ____ as ____
 ```
 `@solution`
