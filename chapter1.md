@@ -69,7 +69,9 @@ key: 56c6ebec11
 
 Now that you have imported `pandas` library, we can focus on acquiring the data. This means pointing pandas to a data source, so it can transform it into a `DataFrame`. In very broad terms a DataFrame is simply a data structure with observations and variables (you can think of it as a spreadsheet with rows and columns).
 
-Pandas can import data from a variety of sources that include text files, databases, APIs and so on. For this particular project we will import a CSV (comma-separated value) file.
+Pandas can import data from a variety of sources that include text files, databases, APIs and so on. For this particular project we will import a CSV (comma-separated value) file
+
+In Python, variables can be used to label pieces of code or values, which can then be referred to, used or changed later. For example 'x = 5' assigns the value of '5' to the variable 'x'. 
 
 `@instructions`
 1) Use `pd.read_csv()` to tell Python you want to import a CSV file
