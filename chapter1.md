@@ -69,14 +69,15 @@ key: 56c6ebec11
 
 Now that you have imported `pandas` library, we can focus on acquiring the data. This means pointing pandas to a data source, so it can transform it into a `DataFrame`. In very broad terms a DataFrame is simply a data structure with observations and variables (you can think of it as a spreadsheet with rows and columns).
 
-Pandas can import data from a variety of sources that include text files, databases, APIs and so on. For this particular project we will import a CSV (comma-separated value) file
+Pandas contains useful methods, here we will use its method for reading csv files. Which we do using `pd.read_csv()` which tells python to use the `read_csv()` method from `pandas` (which we labelled `pd`). 
 
-In Python, variables can be used to label pieces of code or values, which can then be referred to, used or changed later. For example 'x = 5' assigns the value of '5' to the variable 'x'. 
+In Python, variables can be used to label pieces of code or values so they can be used later. For example `x=5` assigns the value of `5` to the variable `x`. 
 
 `@instructions`
-1) Use `pd.read_csv()` to tell Python you want to import a CSV file
+1) Use `pd.read_csv()` to tell Python to import a CSV file. 
 
-2) Make sure you include the filename `mars_data`
+2) We need to specify the filename of the file we want to read inside the brackets of the `read_csv()` method. 
+   In this case the filename is  `mars_data`.
 
 3) Assign the code to a variable `df` (abbreviation of DataFrame)
 
