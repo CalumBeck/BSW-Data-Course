@@ -14,10 +14,12 @@ xp: 100
 skills: 2
 key: 286ddf980c
 ```
+On the right, you can see some Python script, which can be run by hitting Run Code. The output will be shown in the 
+IPython shell in the bottom right of the page. You can also use the reset button to restore the original code, and 
+the Submit Answer button when you think you have completed the instructions and wish to progress to the next task.
 
-`Libraries` are collections of code that have been written by other developers and packaged for anyone to use.
-
-Imagine libraries as tools for building a house - you would not make your own hammer, nails and bricks, but rather buy these items in a shop. Similarly, libraries equip you with useful code that can be easily reused. For free! 
+In this task we want to import some `Libraries`, which are collections of code that have been written by other 
+developers and packaged for anyone to use.
 
 Two of the most useful libraries are:
 
@@ -34,8 +36,7 @@ The code to import the `numpy` library has already been written for you as an ex
 
 `@sample_code`
 ```{python}
-#Lines beggining with # symbol are called commments and are ignored when the code is run
-#They can be used to decribe in plain english what the code is doing
+#Lines beggining with a # are called comments and are ignored when the code is run
 #Import numpy library and label it np
 import numpy as np
 
@@ -56,6 +57,8 @@ success_msg("Good job! The required libraries have been imported.")
 
 
 
+
+
 ---
 ## Import the data
 
@@ -71,12 +74,12 @@ Now that you have imported `pandas` library, we can focus on acquiring the data.
 
 Pandas contains useful methods, here we will use its method for reading csv files. Which we do using `pd.read_csv()` which tells python to use the `read_csv()` method from `pandas` (which we labelled `pd`). 
 
-In Python, variables can be used to label pieces of code or values so they can be used later. For example `x=5` assigns the value of `5` to the variable `x`. 
+In Python, variables can be used to label pieces of code or values so they can be used later. Variables can be assigned using `=`; For example `x = 5` assigns the value of `5` to the variable `x`. 
 
 `@instructions`
 1) Use `pd.read_csv()` to tell Python to import a CSV file. 
 
-2) We need to specify the filename of the file we want to read inside the brackets of the `read_csv()` method. 
+2) We need to specify the filename we want to read inside the brackets of the `read_csv()` method. 
    In this case the filename is  `mars_data`.
 
 3) Assign the code to a variable `df` (abbreviation of DataFrame)
@@ -103,6 +106,8 @@ df = pd.read_csv(mars_data)
 test_data_frame("df", columns=['zone','product','lifetime_value','age','home_planet'])
 success_msg("Nice! Now you have a dataset to work with.")
 ```
+
+
 
 
 
