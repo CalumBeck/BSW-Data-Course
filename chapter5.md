@@ -329,7 +329,7 @@ x = df.drop(['home_planet'], axis=1)
 y = df['home_planet']
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2)
 
-dt = DecisionTreeClassifier()
+dt = DecisionTreeClassifier(random_state=42)
 dt.fit(x_train, y_train)
 predictions = dt.predict(x_test)
 

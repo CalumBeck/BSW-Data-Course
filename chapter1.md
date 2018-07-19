@@ -170,7 +170,7 @@ xp: 100
 skills: 2
 key: '6634919059'
 ```
-In this task we will be using some methods from Pythons built in `Library`.
+In this task we will be using a method from Pythons built in `Library`.
 
 `Libraries` are collections of code that have been written by other developers and packaged for anyone to use. 
 They contain useful packets of code called modules or methods. 
@@ -178,13 +178,12 @@ They contain useful packets of code called modules or methods.
 We'll use a method from the built in Library called `append()`, which is used to add an element to the end of a list. 
 
 The method is applied to a list using a dot like so `Name_of_List.append(element)`
-It takes what is called the `argument` in the brackets, where you write the element 
-you would like to add, and it appends it on to the list.
-
+It takes whatever is contained in the brackets, known as the argument, and adds it to
+the list you're applying append to.
 `@instructions`
 We've hired a new employee called Heather. 
 
-We need to add her name, as a string, to the list of Employees.
+We need to add her name, as a string, to the list of Employees. If you need help, use the hint.
 
 `@hint`
 
@@ -196,8 +195,8 @@ Try the same but with the list `Employees` rather than `CoolShapes` and `Heather
 #List of Employees: Jerome, Sarah and Pete. 
 Employees = ['Jerome', 'Sarah', 'Pete']
 
-#Fill in the blanks to add the new employee, Heather, to the list
-_.append(_)
+#Add the new employee, Heather, to the list
+
 
 ```
 `@solution`
@@ -214,4 +213,75 @@ Ex().has_equal_ast()
 success_msg("Heather is officially hired!")
 ```
 
+---
+## Lists and Loops
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 392431413c
+```
+Now we're going to use a really useful tool, loops. Often we will need to do a similiar task multiple times, and it can easier to use a loop rather than write out multiple lines of very similiar code. 
+
+In this task, we are going to use a `for` loop to create a list of square numbers. 
+
+A square number can be made using `x**2`, which would give the square of `x`. 
+
+We will also use the `range()` function, which produces a list of numbers, starting from 0, up to the number written inside the brackets
+
+`@instructions`
+Run the existing code to see an example of how the `for` loop and `range()` function work. 
+
+Then write your own for loop, adding the square numbers up to 10 to the empty list created for you.
+
+Use the hint if you get stuck.
+
+`@hint`
+
+`List_of_Squares.append(i**2)` is the code to add the square of i to the list. Copy the example for loop, replacing the print statement with the append code. 
+Remember to use a `:` at the end of the for statement, and indent the code being looped over. 
+
+`@sample_code`
+```{python}
+#Prints the square numbers from 0 to 10
+for i in range(10):
+    #This indented code is looped over
+    print(i**2)
+
+#Creates an empty list to append the square numbers to
+List_of_Squares = []
+
+#Create your own for loop below to append the square numbers to the empty list
+
+
+
+#Print the final list
+print (List_of_Squares)
+
+```
+`@solution`
+```{python}
+#Prints the square numbers from 0 to 10
+for i in range(10):
+    #This indented code is looped over
+    print(i**2)
+
+#Creates an empty list to append the square numbers to
+List_of_Squares = []
+
+#Create your own for loop below to append the square numbers to the empty list
+for i in range(10):
+    List_of_Squares.append(i**2)
+
+#Print the final list
+print (List_of_Squares)
+    
+```
+`@sct`
+```{python}
+Ex().has_equal_ast()
+success_msg("Great Work! Now we can get started working on some Martian data")
+```
 
