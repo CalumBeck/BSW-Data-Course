@@ -13,8 +13,7 @@ xp: 100
 skills: 2
 key: 0527a57273
 ```
-In this task we want to import some `Libraries`, which are collections of code that have been written by other 
-developers and packaged for anyone to use.
+In this task we want to import some `Libraries`
 
 Two of the most useful libraries are:
 

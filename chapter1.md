@@ -4,7 +4,7 @@ description: >-
   In this chapter you will learn how to kick off your data analysis project. This includes equipping your working environment with powerful libraries, importing the data you want to analyze and checking if the data import has been successful.
 
 ---
-## Python for Maths
+## Creating Calculations
 
 ```yaml
 type: NormalExercise
@@ -69,7 +69,7 @@ success_msg("12 + 9 = 21! Who'd have thunk it!")
 
 
 ---
-## Python Variables
+## Valuable Variables 
 
 ```yaml
 type: NormalExercise
@@ -123,7 +123,7 @@ success_msg("Awesome! You're one step closer to mastering Python")
 
 
 ---
-## Python Variables
+## Some Lovely Lists
 
 ```yaml
 type: NormalExercise
@@ -132,48 +132,79 @@ xp: 100
 skills: 2
 key: dd553a1bba
 ```
-Sometimes we might need to keep track of a value that we want to use more than once, or change when something happens. 
-
-To do this we can use a variable. In Python, variables can be used to label pieces of code or values so they can be 
-used later. Variables can be assigned using `=`; For example `x = 5` assigns the value of `5` to the variable `x`.
+A really useful way to keep track of data, is to make a list. Lists are a series of elements contained in square brackets. For example, `CoolShapes = ['Circle', 'Rhombus', 'Triangle']` creates a list of 3 strings, which are bits of text  inside " (double-quotes) or ' (single-quotes). Strings are an example of a type of data, another one is integers which we have used in the last exercise. Python lists can contain multiple types in the same list, it can even contain other lists!
 
 `@instructions`
-Did you remember how to multiply? Try multiplying the variables `x` and `y` and printing the result.
+Make your own list called Employees, with 3 strings for your employee names. Your current employees are Jerome, Sarah and Pete. 
 
 
 `@sample_code`
 ```{python}
-#Assign variable x
-x = 5
+#List of some cool shapes
+CoolShapes = ['Circle', 'Rhombus', 'Triangle']
 
-#Assign variable y
-y = 2
-
-#Add x and y
-print (x + y)
-
-#Multiply x and y
+#List of Employees: Jerome, Sarah and Pete. 
 
 ```
 `@solution`
 ```{python}
-#Assign variable x
-x = 5
+#List of some cool shapes
+CoolShapes = ['Circle', 'Rhombus', 'Triangle']
 
-#Assign variable y
-y = 2
-
-#Add x and y
-print (x + y)
-
-#Multiply x and y
-print (x * y)
+#List of Employees: Jerome, Sarah and Pete. 
+Employees = ['Jerome', 'Sarah', 'Pete']
 ```
 `@sct`
 ```{python}
 Ex().has_equal_ast()
-success_msg("Awesome! You're one step closer to mastering Python")
+success_msg("That's a lovely list you've made there, good stuff!")
 ```
 
+---
+## Hiring Heather
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: '6634919059'
+```
+In this task we will be using some methods from Pythons built in `Library`.
+
+`Libraries` are collections of code that have been written by other developers and packaged for anyone to use. 
+They contain useful packets of code called modules or methods. We'll use a method from the built in Library called
+`append()`, which is used to add an element to the end of a list. The method is applied to a list using a dot like so 
+`Name_of_List.append(element)` It takes what is called the `argument` in the brackets, where you write the element you 
+would like to add, and it appends it on to the list.
+
+`@instructions`
+We've hired a new employee called Heather. 
+
+We need to add her name, as a string, to the list of Employees.
+
+
+`@sample_code`
+```{python}
+#List of Employees: Jerome, Sarah and Pete. 
+Employees = ['Jerome', 'Sarah', 'Pete']
+
+#Fill in the blanks to add the new employee, Heather, to the list
+_.append(_)
+
+```
+`@solution`
+```{python}
+#List of Employees: Jerome, Sarah and Pete. 
+Employees = ['Jerome', 'Sarah', 'Pete']
+
+#Fill in the blanks to add the new employee, Heather, to the list
+Employees.append('Heather')
+```
+`@sct`
+```{python}
+Ex().has_equal_ast()
+success_msg("Heather is officially hired!")
+```
 
 
