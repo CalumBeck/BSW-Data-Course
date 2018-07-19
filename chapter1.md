@@ -3,6 +3,59 @@ title: Getting started
 description: >-
   In this chapter you will learn how to kick off your data analysis project. This includes equipping your working environment with powerful libraries, importing the data you want to analyze and checking if the data import has been successful.
 
+---
+## Python for Maths
+
+```yaml
+type: NormalExercise
+lang: python
+xp: 100
+skills: 2
+key: 286ddf980c
+```
+On the right, you can see some Python script, which can be run by hitting Run Code. The output will be shown in the 
+IPython shell in the bottom right of the page. You can also use the reset button to restore the original code, and 
+the Submit Answer button when you think you have completed the instructions and wish to progress to the next task.
+
+In this task we want to use Python to complete some simple calculations, some examples have been written for you. 
+
+In the code we have used `print` statements. They print the result of whatever is contained in their brackets to 
+the IPython shell so that you can see it.  Hit run code to see how it works, then you can try writing your own!
+
+`@instructions`
+Calculate `12 + 9`, and tell python to print the answer, just like the examples already written.
+
+
+
+`@sample_code`
+```{python}
+#Lines beggining with a # are called comments and are ignored when the code is run
+#Python can add
+print (5 + 5)
+
+#Python can divide
+print (10 / 2)
+
+#Python can multiply
+print (8 * 4)
+
+#Write your own sum below
+
+```
+`@solution`
+```{python}
+print (12 + 9)
+```
+`@sct`
+```{python}
+Ex().has_equal_ast()
+success_msg("Good job! The required libraries have been imported.")
+```
+
+
+
+
+
 
 ---
 ## Import the required libraries
@@ -12,7 +65,7 @@ type: NormalExercise
 lang: python
 xp: 100
 skills: 2
-key: 286ddf980c
+key: '98e9001084'
 ```
 On the right, you can see some Python script, which can be run by hitting Run Code. The output will be shown in the 
 IPython shell in the bottom right of the page. You can also use the reset button to restore the original code, and 
@@ -36,7 +89,6 @@ The code to import the `numpy` library has already been written for you as an ex
 
 `@sample_code`
 ```{python}
-#Lines beggining with a # are called comments and are ignored when the code is run
 #Import numpy library and label it np
 import numpy as np
 
@@ -52,7 +104,6 @@ import pandas as pd
 test_import("pandas", same_as = True)
 success_msg("Good job! The required libraries have been imported.")
 ```
-
 
 
 
