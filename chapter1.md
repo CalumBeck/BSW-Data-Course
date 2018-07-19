@@ -173,16 +173,23 @@ key: '6634919059'
 In this task we will be using some methods from Pythons built in `Library`.
 
 `Libraries` are collections of code that have been written by other developers and packaged for anyone to use. 
-They contain useful packets of code called modules or methods. We'll use a method from the built in Library called
-`append()`, which is used to add an element to the end of a list. The method is applied to a list using a dot like so 
-`Name_of_List.append(element)` It takes what is called the `argument` in the brackets, where you write the element you 
-would like to add, and it appends it on to the list.
+They contain useful packets of code called modules or methods. 
+
+We'll use a method from the built in Library called `append()`, which is used to add an element to the end of a list. 
+
+The method is applied to a list using a dot like so `Name_of_List.append(element)`
+It takes what is called the `argument` in the brackets, where you write the element 
+you would like to add, and it appends it on to the list.
 
 `@instructions`
 We've hired a new employee called Heather. 
 
 We need to add her name, as a string, to the list of Employees.
 
+`@hint`
+
+If we wanted to append `Square` to the `CoolShapes` list, we would write `CoolShapes.append('Square')`
+Try the same but with the list `Employees` rather than `CoolShapes` and `Heather` instead of `Square`
 
 `@sample_code`
 ```{python}

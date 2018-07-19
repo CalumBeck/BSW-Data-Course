@@ -182,8 +182,6 @@ For now, review the glorious code you have written.
 `@instructions`
 Click `Submit Answer` once you are ready to proceed!
 
-`@hint`
-
 
 `@pre_exercise_code`
 ```{python}
