@@ -44,6 +44,17 @@ print (8 * 4)
 ```
 `@solution`
 ```{python}
+#Lines beggining with a # are called comments and are ignored when the code is run
+#Python can add
+print (5 + 5)
+
+#Python can divide
+print (10 / 2)
+
+#Python can multiply
+print (8 * 4)
+
+#Write your own sum below
 print (12 + 9)
 ```
 `@sct`
