@@ -67,9 +67,8 @@ Stack overflow is a great site, where over 16 million questions have been asked,
 `@solution`
 
 ```{python}
-
+for i in 
 ```
-
 
 `@sct`
 
