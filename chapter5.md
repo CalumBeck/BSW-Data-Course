@@ -3,7 +3,7 @@
   description: "This final chapter will give you a taste of the all-powerful Machine Learning. You will learn how to preprocess your data and apply a Decision Tree algorithm to predict the home planet of a given customer."
 ---
 
-## Insert exercise title here
+## Dicerolls
 
 ```yaml
 type: NormalExercise 
@@ -67,6 +67,6 @@ for i range(100):
 `@sct`
 
 ```{python}
-Ex().has_equal_ast(code = "randint(1,6)")
+Ex().has_code(randint(1,6))
 success_msg("Well done!")
 ```
