@@ -3,7 +3,7 @@
   description: "This final chapter will give you a taste of the all-powerful Machine Learning. You will learn how to preprocess your data and apply a Decision Tree algorithm to predict the home planet of a given customer."
 ---
 
-## Dicerolls
+## Insert exercise title here
 
 ```yaml
 type: NormalExercise 
@@ -62,11 +62,12 @@ from random import randint
 #Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
 for i in range(100):
   Dicerolls.append(randint(1, 6) + randint(1, 6))
+
 ```
 
 `@sct`
 
 ```{python}
-Ex().has_code(randint(1,6))
+Ex().has_equal_ast()
 success_msg("Well done!")
 ```
