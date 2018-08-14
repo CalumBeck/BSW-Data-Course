@@ -1,9 +1,9 @@
 ---
-  title: "Introduction to Machine Learning"
-  description: "This final chapter will give you a taste of the all-powerful Machine Learning. You will learn how to preprocess your data and apply a Decision Tree algorithm to predict the home planet of a given customer."
+  title: "Casino challenge"
+  description: "This chapter is a little more challenging and independent. You are tasked with helping a casino who have a few issues with rolling dice. Rather than being told how to do something, you will need to use stack exchange to work it out yourself, which is a good way to work things out in future. "
 ---
 
-## Insert exercise title here
+## Roll the dice
 
 ```yaml
 type: NormalExercise 
@@ -20,7 +20,7 @@ The casino would like to trial a computer version, in which 2 random numbers bet
 
 You will need to make use of a random number generator. A useful way to learn how to do things is use stack overflow. 
 
- [https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9](url)
+https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9
 
 
 `@instructions`
@@ -71,3 +71,51 @@ for i in range(100):
 Ex().has_equal_ast()
 success_msg("Well done!")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 23bdd32abf   
+```
+
+
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
+`@sample_code`
+
+```{python}
+
+```
+
+
+`@solution`
+
+```{python}
+
+```
+
+
+`@sct`
+
+```{python}
+
+```
+
