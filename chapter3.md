@@ -213,51 +213,80 @@ key: a97d1d137c
 ```
 
 
-Now that the variables are transformed, it is time to give another shot at finding the correlation between them. Since the distribution of the transformed variables is closer to a normal one, the assumption is that the correlation coefficient should have greater accuracy.
+Oh no! Your colleague has just informed you that an error has been spotted in the backend processes of the bank. This error has led to transaction zones being mixed up. For example, zone 1 should have been labeled as zone 2, zone 3 as 4 and so on:
+
+`Zone 1 --> 2`
+`Zone 2 --> 1`
+`Zone 3 --> 4`
+`Zone 4 --> 3`
+
+To mitigate this issue in your data you can define a function! With the right instructions, it will fix the problem quickly.
 
 
 `@instructions`
-1) Use the `corr()` function to find the correlation between the transformed values
+1) Define a new function called `zone_change`
 
-2) Assign the code to the variable `new_correlation`
+2) Assign the correct zones
 
-3) Print the newly assigned variable
+3) Use the `apply` method on the `zone` column of `df` and assign the results to a new column called `new_zones`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
 import pandas as pd
-import numpy as np
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-df['log_age'] = np.log(df['age'])
-df['log_value'] = np.log(df['lifetime_value'])
+df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv')
 ```
 
 `@sample_code`
 
 ```{python}
-#Find the new correlation
-____ = df['log_value'].____(df['log_age'])
+#Define a function that will replace the values
+def ____(x):
+    if x == 1:
+        return 2
+    if x == 2:
+        return ____
+    if x == 3:
+        return ____
+    if x == 4:
+        return ____
 
-#Print out the result
-print(____)
+#Apply the function to your data         
+df['new_zone'] = df['zone'].____(zone_change)
+
+#Display the data
+print(df.head())
 ```
 
 `@solution`
 
 ```{python}
-#Find the new correlation
-new_correlation = df['log_value'].corr(df['log_age'])
+#Define a function that will replace the values
+def zone_change(x):
+    if x == 1:
+        return 2
+    if x == 2:
+        return 1
+    if x == 3:
+        return 4
+    if x == 4:
+        return 3
 
-#Print out the result
-print(new_correlation)
+#Apply the function to your data        
+df['new_zone'] = df['zone'].apply(zone_change)
+
+#Display the data 
+print(df.head())
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Great! By transforming the variables, you were able to improve the coefficient from 0.2 to 0.329!")
+success_msg("Good job! The new column reflects the true state of the data!")
 ```
 
 ---
