@@ -85,46 +85,62 @@ key: 56c6ebec11
 ```
 
 
-Now that you have imported `pandas` library, we can focus on acquiring the data. This means pointing pandas to a data source, so it can transform it into a `DataFrame`. In very broad terms a DataFrame is simply a data structure with observations and variables (you can think of it as a spreadsheet with rows and columns).
+Sometimes we might need to keep track of a value that we want to use more than once, or change when something happens. 
 
-Pandas contains useful methods, here we will use its method for reading csv files. Which we do using `pd.read_csv()` which tells python to use the `read_csv()` method from `pandas` (which we labelled `pd`). 
-
-In Python, variables can be used to label pieces of code or values so they can be used later. Variables can be assigned using `=`; For example `x = 5` assigns the value of `5` to the variable `x`.
+To do this we can use a variable. In Python, variables can be used to label pieces of code or values so they can be 
+used later. Variables can be assigned using `=`; For example `x = 5` assigns the value of `5` to the variable `x`.
 
 
 `@instructions`
-1) Use `pd.read_csv()` to tell Python to import a CSV file. 
+Did you remember how to multiply? Try multiplying the variables `x` and `y` and printing the result.
 
-2) We need to specify the filename we want to read inside the brackets of the `read_csv()` method. 
-   In this case the filename is  `mars_data`.
+`@hint`
 
-3) Assign the code to a variable `df` (abbreviation of DataFrame)
 
 `@pre_exercise_code`
 
 ```{python}
-import pandas as pd
-mars_data = 'https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv'
+
 ```
+
 
 `@sample_code`
 
 ```{python}
-#Complete the data import below
-____ = pd.____(____)
+#Assign variable x
+x = 5
+
+#Assign variable y
+y = 2
+
+#Add x and y
+print (x + y)
+
+#Multiply x and y
+
 ```
 
 `@solution`
 
 ```{python}
-df = pd.read_csv(mars_data)
+#Assign variable x
+x = 5
+
+#Assign variable y
+y = 2
+
+#Add x and y
+print (x + y)
+
+#Multiply x and y
+print (x * y)
 ```
 
 `@sct`
 
 ```{python}
-test_data_frame("df", columns=['zone','product','lifetime_value','age','home_planet'])
-success_msg("Nice! Now you have a dataset to work with.")
+Ex().has_equal_ast()
+success_msg("Awesome! You're one step closer to mastering Python")
 ```
 
 ---
