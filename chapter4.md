@@ -422,6 +422,9 @@ from ___ import ___
 #List of dice rolls
 Dicerolls = []
 
+#Make any neccesary imports here
+from random import randint
+
 ```
 
 `@sct`
