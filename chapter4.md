@@ -3,14 +3,12 @@
   description: "In this chapter you will perform the main analysis work. This includes calculating the total sum of a column, transforming data and finding correlation between variables."
 ---
 
-## Find the value sum of a column
+## Sum of a column
 
 ```yaml
 type: NormalExercise 
-lang: python
 xp: 100 
-skills: 2
-key: 8a8f6f6a7c   
+key: 2f4a20bef9   
 ```
 
 
@@ -63,14 +61,12 @@ success_msg("Good work! You can now report a profit of 22005 Markles for the day
 
 ---
 
-## Find the correlation
+## Finding Correlation
 
 ```yaml
 type: NormalExercise 
-lang: python
 xp: 100 
-skills: 2
-key: 1aa751294c   
+key: 5f133203b4   
 ```
 
 
@@ -89,6 +85,9 @@ We will use the `corr()` pandas function to see if your manager is right.
 2) Assign the code to a variable `correlation`
 
 3) Print the new variable
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -130,10 +129,8 @@ success_msg("Looks like your manager's intuition was right and now you have some
 
 ```yaml
 type: NormalExercise 
-lang: python
 xp: 100 
-skills: 2
-key: 6c98c363ad   
+key: 4104eefad3   
 ```
 
 
@@ -148,6 +145,9 @@ Your collegue has supplied you with a sample visualization code to illustrate th
 1) Apply the `log()` function to the `age` column and assign the results to a new column called `log_age`
 
 2) Do the same for the `lifetime_value` column. Call the new column `log_value`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -186,10 +186,8 @@ success_msg("Now you have data to teach and test your model!")
 
 ```yaml
 type: NormalExercise 
-lang: python
 xp: 100 
-skills: 2
-key: fa17f9a513   
+key: 15f5d0f7cb   
 ```
 
 
@@ -202,6 +200,9 @@ Now that the variables are transformed, it is time to give another shot at findi
 2) Assign the code to the variable `new_correlation`
 
 3) Print the newly assigned variable
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -242,14 +243,12 @@ success_msg("Great! By transforming the variables, you were able to improve the 
 
 ---
 
-## Visualise the correlation
+## Visualise the relationship
 
 ```yaml
 type: NormalExercise 
-lang: python
 xp: 100 
-skills: 2
-key: ebb2499832   
+key: 88b5c18650   
 ```
 
 
@@ -266,6 +265,9 @@ To do this you will use the `seaborn` data visualization library. It is similar 
 2) Assign `log_age` as x and `log_value` as y values
 
 3) Show the plot by using `plt.show()`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
