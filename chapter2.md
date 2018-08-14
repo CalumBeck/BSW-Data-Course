@@ -74,54 +74,47 @@ key: ff0ef50ee7
 ```
 
 
-The `info()` method has given you some high-level insight into the dataset as a whole.
+Now that you have imported `pandas` library, we can focus on acquiring the data. This means pointing pandas to a data source, so it can transform it into a `DataFrame`. In very broad terms a DataFrame is simply a data structure with observations and variables (you can think of it as a spreadsheet with rows and columns).
 
-What about some statistical description of the individual columns? For this purpose we will use the `describe()`method.
-
-This time you will use a variable to store the code. A variable is like a container that converts lengthy code into a short character string. You have already defined a variable before by creating `df` DataFrame.
-
-Make sure you print the variable and take some time to interpret the output.
+Pandas contains useful methods, here we will use its method for reading csv files. Which we do using `pd.read_csv()` which tells python to use the `read_csv()` method from `pandas` (which we labelled `pd`).
 
 
 `@instructions`
-1) Use the `describe()` method on `df`
+1) Use `pd.read_csv()` to tell Python to import a CSV file. 
 
-2) Assign your code to a variable called `description`
+2) We need to specify the filename we want to read inside the brackets of the `read_csv()` method. 
+   In this case the filename is  `mars_data`.
 
-3) Print out the variable `description`
+3) Assign the code to a variable `df` (abbreviation of DataFrame)
+
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
 import pandas as pd
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
+mars_data = 'https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv'
 ```
 
 `@sample_code`
 
 ```{python}
-#Your code below
-____ = df.____()
-
-#Print the variable below
-print(____)
+#Complete the data import below
+____ = pd.____(____)
 ```
 
 `@solution`
 
 ```{python}
-#Your code below
-description = df.describe()
-
-#Print the variable below
-print(description)
+df = pd.read_csv(mars_data)
 ```
 
 `@sct`
 
 ```{python}
-Ex().has_equal_ast()
-success_msg("Wow, you just received a lot of useful information with a single `describe()` method!")
+test_data_frame("df", columns=['zone','product','lifetime_value','age','home_planet'])
+success_msg("Nice! Now you have a dataset to work with.")
 ```
 
 ---
