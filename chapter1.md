@@ -270,6 +270,92 @@ success_msg("Heather is officially hired!")
 
 ---
 
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 6d77cdd670   
+```
+
+
+Now we're going to use a really useful tool, loops. Often we will need to do a similar task multiple times, and it can easier to use a loop rather than write out multiple lines of very similar code. 
+
+In this task, we are going to make a for loop which simply prints all the items in a list.
+
+A for loop goes through a list, or something similar to a list, and repeats a piece of code for each item in that list. The code being looped over is indented (shifted right). 
+
+```
+for i in CoolShapes:
+       print (i)
+```
+The above code works like follows:
+
+- Assign the variable i to the first item in the CoolShapes list
+- Run the indented code, which in this case, prints whatever item i is assigned to
+-Assign the variable i to the next item in the list
+-Repeat the last 2 bullet points until the end of the list is reached
+
+
+`@instructions`
+Fill the gaps on lines 12 and 13 to make a for loop which prints out all the Employees. An example has been written for you.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
+`@sample_code`
+
+```{python}
+#List of some cool shapes
+CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
+
+#This is a for list! It prints out all the strings in the Coolshapes list
+for i in CoolShapes:
+  print (i)
+
+#List of Employees.
+Employees = ['Jerome', 'Sarah', 'Pete', 'Heather']
+
+#Fill the gaps in the to make a for loop which prints the strings in the Employees list
+for i in _:
+  print (_)
+
+```
+
+`@solution`
+
+```{python}
+#List of some cool shapes
+CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
+
+#This is a for loop! It prints out all the strings in the Coolshapes list
+for i in CoolShapes:
+  print (i)
+
+#List of Employees.
+Employees = ['Jerome', 'Sarah', 'Pete', 'Heather']
+
+#Fill the gaps in the to make a for loop which prints the strings in the Employees list
+for i in Employees:
+  print (i)
+```
+
+`@sct`
+
+```{python}
+Ex().has_equal_ast()
+success_msg("Great Work! Lets try some more")
+```
+
+---
+
 ## The wonderful world of for loops
 
 ```yaml
