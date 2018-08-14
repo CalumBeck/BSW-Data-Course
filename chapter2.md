@@ -14,13 +14,19 @@ key: 5f798c6519
 ```
 
 
-We will begin by getting some very broad information about the DataFrame `df`. For this purpose you will use the `info()` method.
+In this task we want to import some `Libraries`
 
-After you submit the solution, take some time to read the success message that will help you interpret the results.
+Two of the most useful libraries are:
+
+`pandas - for data manipulation and analysis.`
+
+`numpy - for working with data arrays.`
 
 
 `@instructions`
-Use the `info()` method on `df`
+Import `pandas` library and name it `pd` for ease of use. 
+
+The code to import the `numpy` library has already been written for you as an example.
 
 `@hint`
 
@@ -28,28 +34,31 @@ Use the `info()` method on `df`
 `@pre_exercise_code`
 
 ```{python}
-import pandas as pd
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
+
 ```
+
 
 `@sample_code`
 
 ```{python}
-#Your code below
-df.____()
+#Import numpy library and label it np
+import numpy as np
+
+#Import pandas library and label it pd
+import ____ as ____
 ```
 
 `@solution`
 
 ```{python}
-df.info()
+import pandas as pd
 ```
 
 `@sct`
 
 ```{python}
-Ex().has_equal_ast()
-success_msg("Success! You can see that the DataFrame has 110 rows of data and 6 columns. Furthermore, you can see the column names and the variable types that populate them.")
+test_import("pandas", same_as = True)
+success_msg("Good job! The required libraries have been imported.")
 ```
 
 ---
@@ -80,9 +89,6 @@ Make sure you print the variable and take some time to interpret the output.
 2) Assign your code to a variable called `description`
 
 3) Print out the variable `description`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -146,9 +152,6 @@ After you submit the exercises, let's take some time to interpret the results.
 A histogram of the `age` variable has already been created for you as an example. 
 
 3) Display the histogram by using `plt.show()`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -223,9 +226,6 @@ To mitigate this issue in your data you can define a function! With the right in
 2) Assign the correct zones
 
 3) Use the `apply` method on the `zone` column of `df` and assign the results to a new column called `new_zones`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
