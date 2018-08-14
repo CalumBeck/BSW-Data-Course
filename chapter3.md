@@ -297,6 +297,9 @@ You also engaged in some data engineering by creating a new column with transact
 `@instructions`
 Click `Submit Answer` once you are ready to proceed!
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{python}
@@ -313,10 +316,10 @@ df.info()
 
 df.describe()
 
-df['age'].plot.hist()
+plt.hist(df['age'])
 plt.show()
 
-df['lifetime_value'].plot.hist()
+plt.hist(df['lifetime_value'])
 plt.show()
 
 def zone_change(x):
@@ -341,10 +344,10 @@ df.info()
 
 df.describe()
 
-df['age'].plot.hist()
+plt.hist(df['age'])
 plt.show()
 
-df['lifetime_value'].plot.hist()
+plt.hist(df['lifetime_value'])
 plt.show()
 
 def zone_change(x):
