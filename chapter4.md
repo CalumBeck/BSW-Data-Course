@@ -14,13 +14,19 @@ key: 8a8f6f6a7c
 ```
 
 
-We will begin by getting some very broad information about the DataFrame `df`. For this purpose you will use the `info()` method.
+Now that you are familiar with the data, you can finally start exploring it in depth. 
 
-After you submit the solution, take some time to read the success message that will help you interpret the results.
+Your manager has asked to find the total value of all the transactions on Mars that took place during the day. You can do this by using the `sum()` method on the `lifetime_value` column.
 
 
 `@instructions`
-Use the `info()` method on `df`
+1) Select the `lifetime_value` column of `df`
+
+2) Apply the `sum()` method
+
+3) Assign the calculation to the variable `total_value`
+
+4) Print the results
 
 `@hint`
 
@@ -35,21 +41,24 @@ df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datas
 `@sample_code`
 
 ```{python}
-#Your code below
-df.____()
+#Calculate the total value
+____ = df['____'].____
+
+#Print out the results
+print(____)
 ```
 
 `@solution`
 
 ```{python}
-df.info()
+total_value = 22005
 ```
 
 `@sct`
 
 ```{python}
-Ex().has_equal_ast()
-success_msg("Success! You can see that the DataFrame has 110 rows of data and 6 columns. Furthermore, you can see the column names and the variable types that populate them.")
+test_object('total_value')
+success_msg("Good work! You can now report a profit of $22005 for the day!")
 ```
 
 ---
