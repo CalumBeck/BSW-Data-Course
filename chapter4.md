@@ -405,31 +405,20 @@ For each pair of dice rolls, add their sum to the list created for you. So you e
 `@sample_code`
 
 ```{python}
-#List of dice rolls
-Dicerolls = []
 
-#Make any neccesary imports here
-from ___ import ___
-
-#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
 ```
+
 
 `@solution`
 
 ```{python}
-#List of dice rolls
-Dicerolls = []
 
-
-
-#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
-for i range(100):
-  Dicerolls.append(randint(1, 6) + randint(1, 6))
 ```
+
 
 `@sct`
 
 ```{python}
-Ex().has_code(randint(1,6))
+Ex().has_equal_ast()
 success_msg("Well done!")
 ```
