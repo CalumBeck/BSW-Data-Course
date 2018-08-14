@@ -141,6 +141,9 @@ A histogram of the `age` variable has already been created for you as an example
 
 3) Display the histogram by using `plt.show()`
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{python}
@@ -155,11 +158,11 @@ df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datas
 import matplotlib.pyplot as ____
 
 #A histogram to show the distribution of the age variable
-df['age'].plot.hist()
+plt.hist(df['age'])
 plt.show()
 
 #Create a histogram to show the distribution of the lifetime value variable 
-df['____'].plot.____()
+plt.___(df['____'])
 ____
 ```
 
@@ -170,11 +173,11 @@ ____
 import matplotlib.pyplot as plt
 
 #Create a histogram to show the distribution of age variable
-df['age'].plot.hist()
+plt.hist(df['age'])
 plt.show()
 
 #Create a histogram to show the distribution of lifetime value variable 
-df['lifetime_value'].plot.hist()
+plt.hist(df['lifetime_value'])
 plt.show()
 ```
 
@@ -214,9 +217,6 @@ To mitigate this issue in your data you can define a function! With the right in
 2) Assign the correct zones
 
 3) Use the `apply` method on the `zone` column of `df` and assign the results to a new column called `new_zones`
-
-`@hint`
-
 
 `@pre_exercise_code`
 

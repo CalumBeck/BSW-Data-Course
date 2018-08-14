@@ -18,7 +18,7 @@ In one of the games, a customer pays 1 markle, the local martian currency, to ro
 
 The casino would like to trial a computer version, in which 2 random numbers between 1 and 6 are generated instead of using real dice. A customer called Zworby has volunteered to trial the game, and would like to play 100  times.
 
-You will need to make use of a random number generator. A useful way to learn how to do things is use stack overflow. Follow the address below, and adapt the example given for 
+You will need to make use of a random number generator. A useful way to learn how to do things is use stack overflow. Follow the address below, and adapt the example given to simulate a dice roll.
 
 https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9
 
@@ -95,16 +95,28 @@ key: 23bdd32abf
 `@pre_exercise_code`
 
 ```{python}
+#List of dice rolls
+Dicerolls = []
+
+#Make any neccesary imports here
+from random import randint
+
+#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
+for i in range(100):
+  Dicerolls.append(randint(1, 6) + randint(1, 6))
 
 ```
-
 
 `@sample_code`
 
 ```{python}
+import matplotlib.pyplot as plt
 
+x = Dicerolls
+plt.hist(x)
+plt.ylabel('Probability');
+plt.show()
 ```
-
 
 `@solution`
 
