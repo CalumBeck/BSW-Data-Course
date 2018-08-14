@@ -14,9 +14,7 @@ key: 286ddf980c
 ```
 
 
-On the right, you can see some Python script, which can be run by hitting Run Code. The output will be shown in the 
-IPython shell in the bottom right of the page. You can also use the reset button to restore the original code, and 
-the Submit Answer button when you think you have completed the instructions and wish to progress to the next task.
+On the right you can see some python script, called _script.py_, which you can write code in to, and then run by hitting the Run Code button. The output will be shown in the IPython shell in the bottom right of the page. You can also use the reset button to restore the original code, and the Submit Answer button when you think you have completed the instructions and wish to progress to the next task.
 
 In this task we want to use Python to complete some simple calculations, some examples have been written for you. 
 
@@ -48,7 +46,6 @@ print (5 + 5)
 print (8 * 4)
 
 #Write your own sum below
-
 ```
 
 `@solution`
@@ -94,16 +91,6 @@ used later. Variables can be assigned using `=`; For example `x = 5` assigns the
 `@instructions`
 Did you remember how to multiply? Try multiplying the variables `x` and `y` and printing the result.
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -117,7 +104,6 @@ y = 2
 print (x + y)
 
 #Multiply x and y
-
 ```
 
 `@solution`
@@ -162,16 +148,6 @@ A really useful way to keep track of data, is to make a list. Lists are a series
 `@instructions`
 Make your own list called Employees, with 3 strings for your employee names. Your current employees are Jerome, Sarah and Pete.
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -179,7 +155,6 @@ Make your own list called Employees, with 3 strings for your employee names. You
 CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
 #List of Employees: Jerome, Sarah and Pete.
-
 ```
 
 `@solution`
@@ -247,7 +222,6 @@ mars_data = 'https://assets.datacamp.com/production/repositories/2588/datasets/e
 Employees = ['Jerome', 'Sarah', 'Pete']
 
 #Add the new employee, Heather, to the list
-
 ```
 
 `@solution`
