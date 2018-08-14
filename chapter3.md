@@ -71,21 +71,24 @@ key: b8cf4b8501
 ```
 
 
-Your manager is convinced there is positive correlation between customer's age and their lifetime value. This means that the independent variable of age influences the dependent variable of profit. In other words, the older the customer, the more profit the bank receives from doing business with them. 
+The `info()` method has given you some high-level insight into the dataset as a whole.
 
-This dependency could exist for a variety of reasons. Also, correlation does not always mean causation, but the relationship is interesting to explore nonetheless.
+What about some statistical description of the individual columns? For this purpose we will use the `describe()`method.
 
-Your task is to investigate the manager's hypothesis further. 
+This time you will use a variable to store the code. A variable is like a container that converts lengthy code into a short character string. You have already defined a variable before by creating `df` DataFrame.
 
-We will use the `corr()` pandas function to see if your manager is right.
+Make sure you print the variable and take some time to interpret the output.
 
 
 `@instructions`
-1) Use the `corr()` function to find the correlation between `age` and `lifetime_value'`
+1) Use the `describe()` method on `df`
 
-2) Assign the code to a variable `correlation`
+2) Assign your code to a variable called `description`
 
-3) Print the new variable
+3) Print out the variable `description`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -97,28 +100,28 @@ df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datas
 `@sample_code`
 
 ```{python}
-#Find the correlation between the two variables
-____ = df['age'].___(df['lifetime_value'])
+#Your code below
+____ = df.____()
 
-#Print out the results
-print(_____)
+#Print the variable below
+print(____)
 ```
 
 `@solution`
 
 ```{python}
-#Find the correlation between the two variables
-correlation = df['age'].corr(df['lifetime_value'])
+#Your code below
+description = df.describe()
 
-#Print out the results
-print(correlation)
+#Print the variable below
+print(description)
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Looks like your manager's intuition was right and now you have some empirical evidence to support it!")
+success_msg("Wow, you just received a lot of useful information with a single `describe()` method!")
 ```
 
 ---
