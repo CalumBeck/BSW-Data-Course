@@ -130,64 +130,59 @@ key: 0a8799887e
 ```
 
 
-Statistical analysis is great, but sometimes a visualization can be an extremely powerful tool to understand the data quickly and effectively. For this purpose you will import a new library called `matplotlib`.
+Congratulations! You have just imported your data...
 
-We will focus on understanding the distributions of our data by creating a histogram. This will help your statistical analysis in the upcoming chapter. 
-
-After you submit the exercises, let's take some time to interpret the results.
+...or have you? To check your data we will use the `head()` and `tail()` methods.
 
 
 `@instructions`
-1) Import the `matplotlib.pyplot` library as `plt`
+1) Use `tail()` method on the `df` object and specify the parameter of `10` inside the brackets to view the last 10 rows of the DataFrame.
 
-2) Create a histogram of the `lifetime_value` variable by using `hist()`
+The `head()` method has been written for you as an example (it returns 5 rows of data if you do not specify a number in the brackets).
 
-A histogram of the `age` variable has already been created for you as an example. 
+2) Wrap the code you write in a `print()` function to "print out" the output
 
-3) Display the histogram by using `plt.show()`
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
-import pandas as pd
+import pandas as pd 
 df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv')
 ```
 
 `@sample_code`
 
 ```{python}
-#Import the required modules
-import matplotlib.pyplot as ____
+#Check the first 5 rows of the DataFrame (nothing will be displayed)
+df.head()
 
-#A histogram to show the distribution of the age variable
-df['age'].plot.hist()
-plt.show()
+#Check and print the first 5 rows of the DataFrame (output will be displayed in the console)
+print(df.head())
 
-#Create a histogram to show the distribution of the lifetime value variable 
-df['____'].plot.____()
-____
+#Check the last 10 rows of the DataFrame
+____(df.____(____))
 ```
 
 `@solution`
 
 ```{python}
-#Import the required modules
-import matplotlib.pyplot as plt
+#Check the first 5 rows of the DataFrame (nothing will be displayed)
+df.head()
 
-#Create a histogram to show the distribution of age variable
-df['age'].plot.hist()
-plt.show()
+#Check and print the first 5 rows of the DataFrame (output will be displayed in the console)
+print(df.head())
 
-#Create a histogram to show the distribution of lifetime value variable 
-df['lifetime_value'].plot.hist()
-plt.show()
+#Check the last 10 rows of the DataFrame
+print(df.tail(10))
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Great work! Note that your data is right skewed - the distribution plots are asymmetrical, with long tails stretching to the right. We will have to do something about this in the future exercises.")
+success_msg("Great! Take some time to explore the outputs.")
 ```
 
 ---
