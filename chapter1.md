@@ -47,7 +47,7 @@ print (5 + 5)
 #Python can multiply
 print (8 * 4)
 
-#Write your own sum below
+#Write your own sum on the next line
 
 ```
 
@@ -94,8 +94,10 @@ used later. Variables can be assigned using `=`; For example `x = 5` assigns the
 `@instructions`
 Did you remember how to multiply? Try multiplying the variables `x` and `y` and printing the result.
 
-`@hint`
+If you forgot how to multiply, feel free to use the hint!
 
+`@hint`
+To multiply 2 variables, called `a` and `b`, we use `a*`
 
 `@pre_exercise_code`
 
@@ -156,11 +158,21 @@ key: 713861b8dd
 ```
 
 
-A really useful way to keep track of data, is to make a list. Lists are a series of elements contained in square brackets. For example, `CoolShapes = ['Circle', 'Rhombus', 'Triangle']` creates a list of 3 strings, which are bits of text  inside " (double-quotes) or ' (single-quotes). Strings are an example of a type of data, another one is integers which we have used in the last exercise. Python lists can contain multiple types in the same list, it can even contain other lists!
+A really useful way to keep track of data, is to make a list. Lists are a series of elements contained in square brackets. For example, `CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']` creates a list of 3 strings, which are bits of text  inside " (double-quotes) or ' (single-quotes). Strings are an example of a type of data, another one is integers which we have used in the last exercise. Python lists can contain multiple types in the same list, it can even contain other lists!
 
 
 `@instructions`
 Make your own list called Employees, with 3 strings for your employee names. Your current employees are Jerome, Sarah and Pete.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
 
 `@sample_code`
 
@@ -168,7 +180,8 @@ Make your own list called Employees, with 3 strings for your employee names. You
 #List of some cool shapes
 CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
-#List of Employees: Jerome, Sarah and Pete.
+#List of Employees: Jerome, Sarah and Pete
+
 ```
 
 `@solution`
