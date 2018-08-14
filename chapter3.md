@@ -137,63 +137,59 @@ key: 7e71720519
 ```
 
 
-Your preliminary analysis looks very promising! However, do you remember when we looked at the distribution of the data in Chapter 2? Both, `age` and `lifetime_value` variables are skewed to the right and this is most definitely affecting our findings. 
+Statistical analysis is great, but sometimes a visualization can be an extremely powerful tool to understand the data quickly and effectively. For this purpose you will import a new library called `matplotlib`.
 
-Worry not! We can fix this by transforming the variables. To do this we will apply the numpy `log()` function to all the data points in the two columns. 
+We will focus on understanding the distributions of our data by creating a histogram. This will help your statistical analysis in the upcoming chapter. 
 
-Your collegue has supplied you with a sample visualization code to illustrate the changes the transformations make. Take some time to review the output charts once you complete the instructions below.
+After you submit the exercises, let's take some time to interpret the results.
 
 
 `@instructions`
-1) Apply the `log()` function to the `age` column and assign the results to a new column called `log_age`
+1) Import the `matplotlib.pyplot` library as `plt`
 
-2) Do the same for the `lifetime_value` column. Call the new column `log_value`
+2) Create a histogram of the `lifetime_value` variable by using `hist()`
+
+A histogram of the `age` variable has already been created for you as an example. 
+
+3) Display the histogram by using `plt.show()`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
 import pandas as pd
-import numpy as np
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-import seaborn as sns
-import matplotlib.pyplot as plt
+df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv')
 ```
 
 `@sample_code`
 
 ```{python}
-#Transform the age variable 
-df['log_age'] = np.____(df['age'])
+#Import the required modules
+import matplotlib.pyplot as ____
 
-#Transform the lifetime_value variable 
-df['____'] = np.log(df['____'])
-
-#The code below will help you visualise the transformed variables
-plt.figure()
-sns.distplot(df['log_age'])
+#A histogram to show the distribution of the age variable
+df['age'].plot.hist()
 plt.show()
 
-plt.figure()
-sns.distplot(df['log_value'])
-plt.show()
+#Create a histogram to show the distribution of the lifetime value variable 
+df['____'].plot.____()
+____
 ```
 
 `@solution`
 
 ```{python}
-#Transform the age variable 
-df['log_age'] = np.log(df['age'])
+#Import the required modules
+import matplotlib.pyplot as plt
 
-#Transform the lifetime_value variable 
-df['log_value'] = np.log(df['lifetime_value'])
-
-#The code below will help you visualise the transformed variables
-plt.figure()
-sns.distplot(df['log_age'])
+#Create a histogram to show the distribution of age variable
+df['age'].plot.hist()
 plt.show()
 
-plt.figure()
-sns.distplot(df['log_value'])
+#Create a histogram to show the distribution of lifetime value variable 
+df['lifetime_value'].plot.hist()
 plt.show()
 ```
 
@@ -201,7 +197,7 @@ plt.show()
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("The data will satisfy statistical inference assumptions much better now!")
+success_msg("Great work! Note that your data is right skewed - the distribution plots are asymmetrical, with long tails stretching to the right. We will have to do something about this in the future exercises.")
 ```
 
 ---
