@@ -48,7 +48,6 @@ Dicerolls = []
 from ___ import ___
 
 #Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
-
 ```
 
 `@solution`
@@ -61,7 +60,7 @@ Dicerolls = []
 from random import randint
 
 #Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
-for i range(99):
+for i range(100):
   Dicerolls.append(randint(1, 6) + randint(1, 6))
 ```
 
