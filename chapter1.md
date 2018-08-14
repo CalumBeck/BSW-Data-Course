@@ -27,6 +27,16 @@ the IPython shell so that you can see it.  Hit run code to see how it works, the
 `@instructions`
 Calculate `12 + 9`, and tell python to print the answer, just like the examples already written.
 
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
 `@sample_code`
 
 ```{python}
@@ -38,6 +48,8 @@ print (5 + 5)
 print (8 * 4)
 
 #Write your own sum on the next line
+
+
 ```
 
 `@solution`
@@ -50,7 +62,7 @@ print (5 + 5)
 #Python can multiply
 print (8 * 4)
 
-#Write your own sum below
+#Write your own on the next line
 print (12 + 9)
 ```
 
@@ -108,6 +120,7 @@ y = 2
 print (x + y)
 
 #Multiply x and y
+
 
 ```
 
@@ -170,6 +183,7 @@ Make your own list called Employees, with 3 strings for your employee names. You
 CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
 #List of Employees: Jerome, Sarah and Pete
+
 
 ```
 
@@ -289,16 +303,6 @@ The above code works like follows:
 `@instructions`
 Fill the gaps on lines 12 and 13 to make a for loop which prints out all the Employees. An example has been written for you.
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -370,13 +374,6 @@ Use the hint if you have forgotten how to append, or get stuck.
 `@hint`
 `List_of_Squares.append(i**2)` is the code to add the square of i to the list. Copy the example for loop, replacing the print statement with the append code. 
 Remember to use a `:` at the end of the for statement, and indent the code being looped over.
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
 
 `@sample_code`
 
