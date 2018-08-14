@@ -419,20 +419,13 @@ from ___ import ___
 `@solution`
 
 ```{python}
-#List of dice rolls
-Dicerolls = []
 
-#Make any neccesary imports here
-from random import randint
-
-#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
-for i range(100):
-  Dicerolls.append(randint(1, 6) + randint(1, 6))
 ```
+
 
 `@sct`
 
 ```{python}
-Ex().has_equal_ast()
+Ex().has_equal_ast(code = "Dicerolls = []")
 success_msg("Well done!")
 ```
