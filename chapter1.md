@@ -212,15 +212,26 @@ key: 689f678c19
 ```
 
 
-You have made good progress so far. Not only have you learned about the importance of libraries, but also imported the data for the upcoming analysis and checked if the import has been successful by using `tail()`. Lastly, you learned about the very common `print()` function. At this rate you will become an experienced data analyst in no time!
+In this task we will be using a method from Pythons built in `Library`.
 
-We also briefly touched upon variables by defining `df`. But more on that in the upcoming exercises...
+`Libraries` are collections of code that have been written by other developers and packaged for anyone to use. 
+They contain useful packets of code called modules or methods. 
 
-For now, review the glorious code you have written.
+We'll use a method from the built in Library called `append()`, which is used to add an element to the end of a list. 
+
+The method is applied to a list using a dot like so `Name_of_List.append(element)`
+It takes whatever is contained in the brackets, known as the argument, and adds it to
+the list you're applying append to.
 
 
 `@instructions`
-Click `Submit Answer` once you are ready to proceed!
+We've hired a new employee called Heather. 
+
+We need to add her name, as a string, to the list of Employees. If you need help, use the hint.
+
+`@hint`
+If we wanted to append `Square` to the `CoolShapes` list, we would write `CoolShapes.append('Square')`
+Try the same but with the list `Employees` rather than `CoolShapes` and `Heather` instead of `Square`
 
 `@pre_exercise_code`
 
@@ -232,28 +243,28 @@ mars_data = 'https://assets.datacamp.com/production/repositories/2588/datasets/e
 `@sample_code`
 
 ```{python}
-import pandas as pd
+#List of Employees: Jerome, Sarah and Pete. 
+Employees = ['Jerome', 'Sarah', 'Pete']
 
-df = pd.read_csv(mars_data)
+#Add the new employee, Heather, to the list
 
-print(df.head())
 ```
 
 `@solution`
 
 ```{python}
-import pandas as pd
+#List of Employees: Jerome, Sarah and Pete. 
+Employees = ['Jerome', 'Sarah', 'Pete']
 
-df = pd.read_csv(mars_data)
-
-print(df.head())
+#Fill in the blanks to add the new employee, Heather, to the list
+Employees.append('Heather')
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("You have completed Chapter 1! Let's keep going.")
+success_msg("Heather is officially hired!")
 ```
 
 ---
