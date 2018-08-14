@@ -198,69 +198,43 @@ key: f350c11c21
 ```
 
 
-Oh no! Your colleague has just informed you that an error has been spotted in the backend processes of the bank. This error has led to transaction zones being mixed up. For example, zone 1 should have been labeled as zone 2, zone 3 as 4 and so on:
+You have made good progress so far. Not only have you learned about the importance of libraries, but also imported the data for the upcoming analysis and checked if the import has been successful by using `tail()`. Lastly, you learned about the very common `print()` function. At this rate you will become an experienced data analyst in no time!
 
-`Zone 1 --> 2`
-`Zone 2 --> 1`
-`Zone 3 --> 4`
-`Zone 4 --> 3`
+We also briefly touched upon variables by defining `df`. But more on that in the upcoming exercises...
 
-To mitigate this issue in your data you can define a function! With the right instructions, it will fix the problem quickly.
+For now, review the glorious code you have written.
 
 
 `@instructions`
-1) Define a new function called `zone_change`
+Click `Submit Answer` once you are ready to proceed!
 
-2) Assign the correct zones
+`@hint`
 
-3) Use the `apply` method on the `zone` column of `df` and assign the results to a new column called `new_zones`
 
 `@pre_exercise_code`
 
 ```{python}
-import pandas as pd
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv')
+import pandas as pd 
+mars_data = 'https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv'
 ```
 
 `@sample_code`
 
 ```{python}
-#Define a function that will replace the values
-def ____(x):
-    if x == 1:
-        return 2
-    if x == 2:
-        return ____
-    if x == 3:
-        return ____
-    if x == 4:
-        return ____
+import pandas as pd
 
-#Apply the function to your data         
-df['new_zone'] = df['zone'].____(zone_change)
+df = pd.read_csv(mars_data)
 
-#Display the data
 print(df.head())
 ```
 
 `@solution`
 
 ```{python}
-#Define a function that will replace the values
-def zone_change(x):
-    if x == 1:
-        return 2
-    if x == 2:
-        return 1
-    if x == 3:
-        return 4
-    if x == 4:
-        return 3
+import pandas as pd
 
-#Apply the function to your data        
-df['new_zone'] = df['zone'].apply(zone_change)
+df = pd.read_csv(mars_data)
 
-#Display the data 
 print(df.head())
 ```
 
@@ -268,5 +242,5 @@ print(df.head())
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Good job! The new column reflects the true state of the data!")
+success_msg("You have completed Chapter 2! Let's keep going.")
 ```
