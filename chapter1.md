@@ -18,20 +18,14 @@ On the right, you can see some Python script, which can be run by hitting Run Co
 IPython shell in the bottom right of the page. You can also use the reset button to restore the original code, and 
 the Submit Answer button when you think you have completed the instructions and wish to progress to the next task.
 
-In this task we want to import some `Libraries`, which are collections of code that have been written by other 
-developers and packaged for anyone to use.
+In this task we want to use Python to complete some simple calculations, some examples have been written for you. 
 
-Two of the most useful libraries are:
-
-`pandas - for data manipulation and analysis.`
-
-`numpy - for working with data arrays.`
+In the code we have used `print` statements. They print the result of whatever is contained in their brackets to 
+the IPython shell so that you can see it.  Hit run code to see how it works, then you can try writing your own!
 
 
 `@instructions`
-Import `pandas` library and name it `pd` for ease of use. 
-
-The code to import the `numpy` library has already been written for you as an example.
+Calculate `12 + 9`, and tell python to print the answer, just like the examples already written.
 
 `@hint`
 
@@ -47,24 +41,35 @@ The code to import the `numpy` library has already been written for you as an ex
 
 ```{python}
 #Lines beggining with a # are called comments and are ignored when the code is run
-#Import numpy library and label it np
-import numpy as np
+#Python can add
+print (5 + 5)
 
-#Import pandas library and label it pd
-import ____ as ____
+#Python can multiply
+print (8 * 4)
+
+#Write your own sum below
+
 ```
 
 `@solution`
 
 ```{python}
-import pandas as pd
+#Lines beggining with a # are called comments and are ignored when the code is run
+#Python can add
+print (5 + 5)
+
+#Python can multiply
+print (8 * 4)
+
+#Write your own sum below
+print (12 + 9)
 ```
 
 `@sct`
 
 ```{python}
-test_import("pandas", same_as = True)
-success_msg("Good job! The required libraries have been imported.")
+Ex().has_equal_ast()
+success_msg("12 + 9 = 21! Who'd have thunk it!")
 ```
 
 ---
@@ -94,9 +99,6 @@ In Python, variables can be used to label pieces of code or values so they can b
    In this case the filename is  `mars_data`.
 
 3) Assign the code to a variable `df` (abbreviation of DataFrame)
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -151,9 +153,6 @@ To view the output of your actions in the console you will you use the `print()`
 The `head()` method has been written for you as an example (it returns 5 rows of data if you do not specify a number in the brackets).
 
 2) Wrap the code you write in a `print()` function to "print out" the output
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -217,9 +216,6 @@ For now, review the glorious code you have written.
 
 `@instructions`
 Click `Submit Answer` once you are ready to proceed!
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -285,13 +281,6 @@ Use the hint if you get stuck.
 `@hint`
 `List_of_Squares.append(i**2)` is the code to add the square of i to the list. Copy the example for loop, replacing the print statement with the append code. 
 Remember to use a `:` at the end of the for statement, and indent the code being looped over.
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
 
 `@sample_code`
 
