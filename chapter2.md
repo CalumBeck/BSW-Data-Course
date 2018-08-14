@@ -1,6 +1,6 @@
 ---
-  title: "Explore the data"
-  description: "Before any serious analytics can begin, it is important to understand your data better. We do this by performing Exploratory Data Analysis (EDA). A few of the available EDA methods will be covered in this chapter."
+  title: "Import the data"
+  description: "In this chapter you will learn how to kick off your data analysis project. This includes equipping your working environment with powerful libraries, importing the data you want to analyze and checking if the data import has been successful."
 ---
 
 ## Import the required libraries
@@ -54,7 +54,7 @@ success_msg("Success! You can see that the DataFrame has 110 rows of data and 6 
 
 ---
 
-## Describe the data
+## Import the data
 
 ```yaml
 type: NormalExercise 
@@ -65,18 +65,21 @@ key: ff0ef50ee7
 ```
 
 
-Now that you have imported `pandas` library, we can focus on acquiring the data. This means pointing pandas to a data source, so it can transform it into a `DataFrame`. In very broad terms a DataFrame is simply a data structure with observations and variables (you can think of it as a spreadsheet with rows and columns).
+The `info()` method has given you some high-level insight into the dataset as a whole.
 
-Pandas contains useful methods, here we will use its method for reading csv files. Which we do using `pd.read_csv()` which tells python to use the `read_csv()` method from `pandas` (which we labelled `pd`).
+What about some statistical description of the individual columns? For this purpose we will use the `describe()`method.
+
+This time you will use a variable to store the code. A variable is like a container that converts lengthy code into a short character string. You have already defined a variable before by creating `df` DataFrame.
+
+Make sure you print the variable and take some time to interpret the output.
 
 
 `@instructions`
-1) Use `pd.read_csv()` to tell Python to import a CSV file. 
+1) Use the `describe()` method on `df`
 
-2) We need to specify the filename we want to read inside the brackets of the `read_csv()` method. 
-   In this case the filename is  `mars_data`.
+2) Assign your code to a variable called `description`
 
-3) Assign the code to a variable `df` (abbreviation of DataFrame)
+3) Print out the variable `description`
 
 `@hint`
 
@@ -85,32 +88,39 @@ Pandas contains useful methods, here we will use its method for reading csv file
 
 ```{python}
 import pandas as pd
-mars_data = 'https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv'
+df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
 ```
 
 `@sample_code`
 
 ```{python}
-#Complete the data import below
-____ = pd.____(____)
+#Your code below
+____ = df.____()
+
+#Print the variable below
+print(____)
 ```
 
 `@solution`
 
 ```{python}
-df = pd.read_csv(mars_data)
+#Your code below
+description = df.describe()
+
+#Print the variable below
+print(description)
 ```
 
 `@sct`
 
 ```{python}
-test_data_frame("df", columns=['zone','product','lifetime_value','age','home_planet'])
-success_msg("Nice! Now you have a dataset to work with.")
+Ex().has_equal_ast()
+success_msg("Wow, you just received a lot of useful information with a single `describe()` method!")
 ```
 
 ---
 
-## Visualise the data
+## Check the data
 
 ```yaml
 type: NormalExercise 
@@ -136,6 +146,9 @@ After you submit the exercises, let's take some time to interpret the results.
 A histogram of the `age` variable has already been created for you as an example. 
 
 3) Display the histogram by using `plt.show()`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -183,7 +196,7 @@ success_msg("Great work! Note that your data is right skewed - the distribution 
 
 ---
 
-## Write a function to fix the data
+## Bring it all together
 
 ```yaml
 type: NormalExercise 
@@ -210,6 +223,9 @@ To mitigate this issue in your data you can define a function! With the right in
 2) Assign the correct zones
 
 3) Use the `apply` method on the `zone` column of `df` and assign the results to a new column called `new_zones`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -265,97 +281,4 @@ print(df.head())
 ```{python}
 Ex().has_equal_ast()
 success_msg("Good job! The new column reflects the true state of the data!")
-```
-
----
-
-## Bring it all together
-
-```yaml
-type: NormalExercise 
-lang: python
-xp: 100 
-skills: 2
-key: 1f72e72c18   
-```
-
-
-Well done! Now you have a much better understanding of the Mars Banking data. You achieved this by, firstly, having a high-level overview with the `info()` method. Then you explored the statistical features of the columns by using `describe()`. Finally, you visually examined the distribution of the values across multiple variables. 
-
-Remember, you found that both `age` and `lifetime_value` columns are right skewed. This means that you will have to transform the values of these columns to effectively apply statistical methods. You will learn more about this in the next chapter.
-
-You also engaged in some data engineering by creating a new column with transaction zone values fixed.
-
-
-`@instructions`
-Click `Submit Answer` once you are ready to proceed!
-
-`@pre_exercise_code`
-
-```{python}
-import pandas as pd
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv')
-```
-
-`@sample_code`
-
-```{python}
-import matplotlib.pyplot as plt
-
-df.info()
-
-df.describe()
-
-df['age'].plot.hist()
-plt.show()
-
-df['lifetime_value'].plot.hist()
-plt.show()
-
-def zone_change(x):
-    if x == 1:
-        return 2
-    if x == 2:
-        return 1
-    if x == 3:
-        return 4
-    if x == 4:
-        return 3
-
-df['new_zones'] = df.zone.apply(zone_change)
-```
-
-`@solution`
-
-```{python}
-import matplotlib.pyplot as plt
-
-df.info()
-
-df.describe()
-
-df['age'].plot.hist()
-plt.show()
-
-df['lifetime_value'].plot.hist()
-plt.show()
-
-def zone_change(x):
-    if x == 1:
-        return 2
-    if x == 2:
-        return 1
-    if x == 3:
-        return 4
-    if x == 4:
-        return 3
-
-df['new_zones'] = df.zone.apply(zone_change)
-```
-
-`@sct`
-
-```{python}
-Ex().has_equal_ast()
-success_msg("Let's march to the next chapter!")
 ```
