@@ -156,51 +156,40 @@ key: 713861b8dd
 ```
 
 
-Congratulations! You have just imported your data...
-
-...or have you? To check your data we will use the `head()` and `tail()` methods.
-
-To view the output of your actions in the console you will you use the `print()` function.
+A really useful way to keep track of data, is to make a list. Lists are a series of elements contained in square brackets. For example, `CoolShapes = ['Circle', 'Rhombus', 'Triangle']` creates a list of 3 strings, which are bits of text  inside " (double-quotes) or ' (single-quotes). Strings are an example of a type of data, another one is integers which we have used in the last exercise. Python lists can contain multiple types in the same list, it can even contain other lists!
 
 
 `@instructions`
-1) Use `tail()` method on the `df` object and specify the parameter of `10` inside the brackets to view the last 10 rows of the DataFrame.
+Make your own list called Employees, with 3 strings for your employee names. Your current employees are Jerome, Sarah and Pete.
 
-The `head()` method has been written for you as an example (it returns 5 rows of data if you do not specify a number in the brackets).
+`@hint`
 
-2) Wrap the code you write in a `print()` function to "print out" the output
 
 `@pre_exercise_code`
 
 ```{python}
-import pandas as pd 
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/e8c7de0372cfe29b1be7bad2b16e28e2e9a56d01/mars_data.csv')
+
 ```
+
 
 `@sample_code`
 
 ```{python}
-#Check the first 5 rows of the DataFrame (nothing will be displayed)
-df.head()
+#List of some cool shapes
+CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
-#Check and print the first 5 rows of the DataFrame (output will be displayed in the console)
-print(df.head())
+#List of Employees: Jerome, Sarah and Pete.
 
-#Check the last 10 rows of the DataFrame
-____(df.____(____))
 ```
 
 `@solution`
 
 ```{python}
-#Check the first 5 rows of the DataFrame (nothing will be displayed)
-df.head()
+#List of some cool shapes
+CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
-#Check and print the first 5 rows of the DataFrame (output will be displayed in the console)
-print(df.head())
-
-#Check the last 10 rows of the DataFrame
-print(df.tail(10))
+#List of Employees: Jerome, Sarah and Pete. 
+Employees = ['Jerome', 'Sarah', 'Pete']
 ```
 
 `@sct`
