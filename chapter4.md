@@ -26,9 +26,6 @@ Your manager has asked to find the total value of all the transactions on Mars t
 
 4) Print the results
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -85,9 +82,6 @@ We will use the `corr()` pandas function to see if your manager is right.
 2) Assign the code to a variable `correlation`
 
 3) Print the new variable
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -146,9 +140,6 @@ Your collegue has supplied you with a sample visualization code to illustrate th
 
 2) Do the same for the `lifetime_value` column. Call the new column `log_value`
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -200,9 +191,6 @@ Now that the variables are transformed, it is time to give another shot at findi
 2) Assign the code to the variable `new_correlation`
 
 3) Print the newly assigned variable
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -265,9 +253,6 @@ To do this you will use the `seaborn` data visualization library. It is similar 
 2) Assign `log_age` as x and `log_value` as y values
 
 3) Show the plot by using `plt.show()`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -379,5 +364,75 @@ plt.show()
 
 ```{python}
 Ex().has_equal_ast()
+success_msg("Well done!")
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 1e14d14f61   
+```
+
+
+A new casino has opened on mars, and they need your help! 
+
+In one of the games, a customer pays 1 markle, the local martian currency, to roll 2 dice. If they can roll a 10 or higher, they win 5 markles. However, the low gravity on Mars means that the dice keep bouncing away! 
+
+The casino would like to trial a computer version, in which 2 random numbers between 1 and 6 are generated instead of using real dice. A customer called Zworby has volunteered to trial the game, and would like to play 100  times.
+
+You will need to make use of a random number generator. A useful way to learn how to do things is use stack overflow. 
+
+ [https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9](url)
+
+
+`@instructions`
+Create a for loop, which generates 2 dice rolls, 100 times.
+
+For each pair of dice rolls, add their sum to the list created for you. So you end up with a list of 100 numbers, each number represents the sum of 2 dice rolls.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
+`@sample_code`
+
+```{python}
+#List of dice rolls
+Dicerolls = []
+
+#Make any neccesary imports here
+from ___ import ___
+
+#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
+```
+
+`@solution`
+
+```{python}
+#List of dice rolls
+Dicerolls = []
+
+#Make any neccesary imports here
+from random import randint
+
+#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
+for i range(100):
+  Dicerolls.append(randint(1, 6) + randint(1, 6))
+```
+
+`@sct`
+
+```{python}
+Ex().has_code(randint(1,6))
 success_msg("Well done!")
 ```
