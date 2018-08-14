@@ -110,24 +110,23 @@ for i in range(100):
 `@sample_code`
 
 ```{python}
-import matplotlib.pyplot as plt
 
-x = Dicerolls
-plt.hist(x)
-plt.ylabel('Probability');
-plt.show()
 ```
+
 
 `@solution`
 
 ```{python}
+import matplotlib.pyplot as plt
 
+x = Dicerolls
+plt.hist(x)
+plt.show()
 ```
-
 
 `@sct`
 
 ```{python}
-
+Ex().has_equal_ast()
+success_msg("Well done!")
 ```
-
