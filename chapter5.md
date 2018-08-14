@@ -67,6 +67,6 @@ for i range(100):
 `@sct`
 
 ```{python}
-Ex().has_equal_ast()
+Ex().has_equal_ast(code = "randint(1,6)")
 success_msg("Well done!")
 ```
