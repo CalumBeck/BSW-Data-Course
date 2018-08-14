@@ -97,7 +97,7 @@ Did you remember how to multiply? Try multiplying the variables `x` and `y` and 
 If you forgot how to multiply, feel free to use the hint!
 
 `@hint`
-To multiply 2 variables, called `a` and `b`, we use `a*`
+To multiply 2 variables, called `a` and `b`, we use `a * b`
 
 `@pre_exercise_code`
 
