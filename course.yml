@@ -1,7 +1,10 @@
-title: Mars Banking Analytics Challenge 
+title: Mars Banking Analytics Challenge
 description: This short course will give you a basic intorduction to the woderful
-  and excting world of data analytics by taking you through the Mars Banking case study. 
+  and excting world of data analytics by taking you through the Mars Banking case
+  study.
 programming_language: python
 from: python-base-prod:21
 datasets:
+  README.md: Readme
+  mars_data.csv: Mars data
   mars_data.xlsx: Mars Data
