@@ -426,6 +426,6 @@ from ___ import ___
 `@sct`
 
 ```{python}
-Ex().has_equal_ast(code = "Dicerolls = []")
+Ex().has_equal_ast()
 success_msg("Well done!")
 ```
