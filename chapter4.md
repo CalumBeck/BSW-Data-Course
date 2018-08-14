@@ -20,13 +20,7 @@ After you submit the solution, take some time to read the success message that w
 
 
 `@instructions`
-1) Select the `lifetime_value` column of `df`
-
-2) Apply the `sum()` method
-
-3) Assign the calculation to the variable `total_value`
-
-4) Print the results
+Use the `info()` method on `df`
 
 `@hint`
 
@@ -41,24 +35,21 @@ df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datas
 `@sample_code`
 
 ```{python}
-#Calculate the total value
-____ = df['____'].____
-
-#Print out the results
-print(____)
+#Your code below
+df.____()
 ```
 
 `@solution`
 
 ```{python}
-total_value = 22005
+df.info()
 ```
 
 `@sct`
 
 ```{python}
-test_object('total_value')
-success_msg("Good work! You can now report a profit of $22005 for the day!")
+Ex().has_equal_ast()
+success_msg("Success! You can see that the DataFrame has 110 rows of data and 6 columns. Furthermore, you can see the column names and the variable types that populate them.")
 ```
 
 ---
