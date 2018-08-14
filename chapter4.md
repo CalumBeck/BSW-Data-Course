@@ -28,9 +28,6 @@ Your manager has asked to find the total value of all the transactions on Mars t
 
 4) Print the results
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -89,9 +86,6 @@ We will use the `corr()` pandas function to see if your manager is right.
 2) Assign the code to a variable `correlation`
 
 3) Print the new variable
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -152,9 +146,6 @@ Your collegue has supplied you with a sample visualization code to illustrate th
 
 2) Do the same for the `lifetime_value` column. Call the new column `log_value`
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -208,9 +199,6 @@ Note that you are also passing the dependent variables labels with `y_train`. Th
 1) Use the `DecisionTreeClassifer` to initiate the model. This will be assigned to the variable `dt`
 
 2) Use the `fit` method on `dt` and pass the training variables, so that your model can learn
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -274,9 +262,6 @@ The However, remember that this only a basic test and to truly assess your model
 
 2) Use the `accuracy_score` function to see what is the percentage of correct predictions
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -317,78 +302,4 @@ print(accuracy_score(y_test,predictions))
 ```{python}
 Ex().has_equal_ast()
 success_msg("Awesome work! Your model predicted well, but clearly could achieve better results by better optimization.")
-```
-
----
-
-## Bring it all together
-
-```yaml
-type: NormalExercise 
-lang: python
-xp: 100 
-skills: 2
-key: 1ee398e3ac   
-```
-
-
-Awesome! As SEB's Mars data analyst you have used `sum()` to find the total value of transactions for the day and `corr()` to correlate variables. Not only that - you have changed the variables with a `log()` transformation to reflect the statistical assumptions more closely. Lastly, you learned about `Seaborn` data visualization library to produce a linear regression model chart.
-
-
-`@instructions`
-Click `Submit Answer` once you are ready to proceed!
-
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-import pandas as pd
-import numpy as np
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-import matplotlib.pyplot as plt
-```
-
-`@sample_code`
-
-```{python}
-import seaborn as sns
-
-print('Total value is:', df['lifetime_value'].sum())
-
-print('First correlation:', df['age'].corr(df['lifetime_value']))
-
-df['log_age'] = np.log(df['age'])
-df['log_value'] = np.log(df['lifetime_value'])
-
-print('Correlation with transformed variables:', df['log_value'].corr(df['log_age']))
-
-sns.lmplot(x='log_age', y='log_value', data=df)
-plt.show()
-```
-
-`@solution`
-
-```{python}
-import seaborn as sns
-
-print('Total value is:', df['lifetime_value'].sum())
-
-print('First correlation:', df['age'].corr(df['lifetime_value']))
-
-df['log_age'] = np.log(df['age'])
-df['log_value'] = np.log(df['lifetime_value'])
-
-print('Correlation with transformed variables:', df['log_value'].corr(df['log_age']))
-
-sns.lmplot(x='log_age', y='log_value', data=df)
-plt.show()
-```
-
-`@sct`
-
-```{python}
-Ex().has_equal_ast()
-success_msg("Well done!")
 ```
