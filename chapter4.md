@@ -1,6 +1,6 @@
 ---
-  title: "Introduction to Machine Learning"
-  description: "This final chapter will give you a taste of the all-powerful Machine Learning. You will learn how to preprocess your data and apply a Decision Tree algorithm to predict the home planet of a given customer."
+  title: "Analyse the data"
+  description: "In this chapter you will perform the main analysis work. This includes calculating the total sum of a column, transforming data and finding correlation between variables."
 ---
 
 ## Find the value sum of a column
