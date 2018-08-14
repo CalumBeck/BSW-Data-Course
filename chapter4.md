@@ -419,9 +419,10 @@ from ___ import ___
 `@solution`
 
 ```{python}
+#List of dice rolls
+Dicerolls = []
 
 ```
-
 
 `@sct`
 
