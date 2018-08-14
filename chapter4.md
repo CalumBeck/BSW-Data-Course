@@ -14,9 +14,9 @@ key: 8a8f6f6a7c
 ```
 
 
-Now that you are familiar with the data, you can finally start exploring it in depth. 
+We will begin by getting some very broad information about the DataFrame `df`. For this purpose you will use the `info()` method.
 
-Your manager has asked to find the total value of all the transactions on Mars that took place during the day. You can do this by using the `sum()` method on the `lifetime_value` column.
+After you submit the solution, take some time to read the success message that will help you interpret the results.
 
 
 `@instructions`
@@ -27,6 +27,9 @@ Your manager has asked to find the total value of all the transactions on Mars t
 3) Assign the calculation to the variable `total_value`
 
 4) Print the results
+
+`@hint`
+
 
 `@pre_exercise_code`
 
@@ -200,9 +203,6 @@ Note that you are also passing the dependent variables labels with `y_train`. Th
 
 2) Use the `fit` method on `dt` and pass the training variables, so that your model can learn
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -269,9 +269,6 @@ To do this you will use the `seaborn` data visualization library. It is similar 
 
 3) Show the plot by using `plt.show()`
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -328,38 +325,4 @@ key: f88ffb3cc1
 
 
 
-
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
-`@sample_code`
-
-```{python}
-
-```
-
-
-`@solution`
-
-```{python}
-
-```
-
-
-`@sct`
-
-```{python}
-
-```
 
