@@ -200,6 +200,9 @@ Note that you are also passing the dependent variables labels with `y_train`. Th
 
 2) Use the `fit` method on `dt` and pass the training variables, so that your model can learn
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{python}
@@ -252,54 +255,111 @@ key: ebb2499832
 ```
 
 
-Now that you have a model ready, you need to assess how well it works. The `accuracy_score` function will compare your model's predictions with the actual class labels contained in `y_test` variable and return a percentage of correct guesses. 
+You have answered all the question your manager has asked you. Good job! 
 
-The However, remember that this only a basic test and to truly assess your model a much deeper analysis is required that is beyond the scope of this course.
+However, to demonstrate your excellence, you can go beyond the basic expectations. Why not provide a chart that visualizes the correlation between `age` and `lifetime_value`? Your manager could use this in a presentation they are putting together.
+
+To do this you will use the `seaborn` data visualization library. It is similar to `matplotlib`, but the visuals are more impressive!
 
 
 `@instructions`
-1) Use the `predict` method on the `x_test` variable to generate class predictions
+1) Import `seaborn` library as `sns`
 
-2) Use the `accuracy_score` function to see what is the percentage of correct predictions
+2) Assign `log_age` as x and `log_value` as y values
+
+3) Show the plot by using `plt.show()`
+
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
 import pandas as pd
-from sklearn.cross_validation import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score
+import numpy as np
 df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-x = df.drop(['home_planet'], axis=1)
-y = df['home_planet']
-x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2)
-dt = DecisionTreeClassifier(random_state=42)
-dt.fit(x_train, y_train)
+df['log_age'] = np.log(df['age'])
+df['log_value'] = np.log(df['lifetime_value'])
+import matplotlib.pyplot as plt
 ```
 
 `@sample_code`
 
 ```{python}
-#Make predictions using the model you developed
-predictions = dt.____(x_test)
+#Import Seaborn
+import seaborn as ____
 
-#Test the accuracy of your model
-print(____(y_test,predictions))
+#Plot the correlation
+sns.lmplot(x='____', y='____', data=df)
+
+#Show the plot
+____
 ```
 
 `@solution`
 
 ```{python}
-#Make predictions using the model you developed
-predictions = dt.predict(x_test)
+#Import Seaborn
+import seaborn as sns
 
-#Test the accuracy of your model
-print(accuracy_score(y_test,predictions))
+#Plot the correlation
+sns.lmplot(x='log_age', y='log_value', data=df)
+
+#Show the plot
+plt.show()
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Awesome work! Your model predicted well, but clearly could achieve better results by better optimization.")
+success_msg("Look at that! Your code has produced a beautiful visualization that illustrates the relationship between the two variables!")
 ```
+
+---
+
+## Bring it all together
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: f88ffb3cc1   
+```
+
+
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
+`@sample_code`
+
+```{python}
+
+```
+
+
+`@solution`
+
+```{python}
+
+```
+
+
+`@sct`
+
+```{python}
+
+```
+
