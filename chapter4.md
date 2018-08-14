@@ -390,7 +390,9 @@ You will need to make use of a random number generator. A useful way to learn ho
 
 
 `@instructions`
+Create a for loop, which generates 2 dice rolls, 100 times.
 
+For each pair of dice rolls, add their sum to the list created for you. So you end up with a list of 100 numbers, each number represents the sum of 2 dice rolls.
 
 `@hint`
 
@@ -405,16 +407,28 @@ You will need to make use of a random number generator. A useful way to learn ho
 `@sample_code`
 
 ```{python}
+#List of dice rolls
+Dicerolls = []
 
+#Make any neccesary imports here
+from ___ import ___
+
+#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
 ```
-
 
 `@solution`
 
 ```{python}
+#List of dice rolls
+Dicerolls = []
 
+#Make any neccesary imports here
+from random import randint
+
+#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
+for i range(100):
+  Dicerolls.append(randint(1, 6) + randint(1, 6))
 ```
-
 
 `@sct`
 
