@@ -193,53 +193,54 @@ key: fa17f9a513
 ```
 
 
-Now comes the fun part! You need to initialize a Decision Tree model and pass the training data to it, so it can learn the relevant features.
-
-Note that you are also passing the dependent variables labels with `y_train`. This means that you are solving a `supervised learning` problem.
+Now that the variables are transformed, it is time to give another shot at finding the correlation between them. Since the distribution of the transformed variables is closer to a normal one, the assumption is that the correlation coefficient should have greater accuracy.
 
 
 `@instructions`
-1) Use the `DecisionTreeClassifer` to initiate the model. This will be assigned to the variable `dt`
+1) Use the `corr()` function to find the correlation between the transformed values
 
-2) Use the `fit` method on `dt` and pass the training variables, so that your model can learn
+2) Assign the code to the variable `new_correlation`
+
+3) Print the newly assigned variable
+
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
 import pandas as pd
-from sklearn.cross_validation import train_test_split
-from sklearn.tree import DecisionTreeClassifier 
+import numpy as np
 df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-x = df.drop(['home_planet'], axis=1)
-y = df['home_planet']
-x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2)
+df['log_age'] = np.log(df['age'])
+df['log_value'] = np.log(df['lifetime_value'])
 ```
 
 `@sample_code`
 
 ```{python}
-#Initiate the model
-dt = ____()
+#Find the new correlation
+____ = df['log_value'].____(df['log_age'])
 
-#Fit the model around the training variables
-dt.____(x_train, y_train)
+#Print out the result
+print(____)
 ```
 
 `@solution`
 
 ```{python}
-#Initiate the model
-dt = DecisionTreeClassifier()
+#Find the new correlation
+new_correlation = df['log_value'].corr(df['log_age'])
 
-#Fit the model around the training variables
-dt.fit(x_train, y_train)
+#Print out the result
+print(new_correlation)
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Great, now you have a an intelligent model!")
+success_msg("Great! By transforming the variables, you were able to improve the coefficient from 0.2 to 0.329!")
 ```
 
 ---
@@ -324,5 +325,63 @@ key: f88ffb3cc1
 ```
 
 
+Awesome! As SEB's Mars data analyst you have used `sum()` to find the total value of transactions for the day and `corr()` to correlate variables. Not only that - you have changed the variables with a `log()` transformation to reflect the statistical assumptions more closely. Lastly, you learned about `Seaborn` data visualization library to produce a linear regression model chart.
 
 
+`@instructions`
+Click `Submit Answer` once you are ready to proceed!
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+import pandas as pd
+import numpy as np
+df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
+import matplotlib.pyplot as plt
+```
+
+`@sample_code`
+
+```{python}
+import seaborn as sns
+
+print('Total value is:', df['lifetime_value'].sum())
+
+print('First correlation:', df['age'].corr(df['lifetime_value']))
+
+df['log_age'] = np.log(df['age'])
+df['log_value'] = np.log(df['lifetime_value'])
+
+print('Correlation with transformed variables:', df['log_value'].corr(df['log_age']))
+
+sns.lmplot(x='log_age', y='log_value', data=df)
+plt.show()
+```
+
+`@solution`
+
+```{python}
+import seaborn as sns
+
+print('Total value is:', df['lifetime_value'].sum())
+
+print('First correlation:', df['age'].corr(df['lifetime_value']))
+
+df['log_age'] = np.log(df['age'])
+df['log_value'] = np.log(df['lifetime_value'])
+
+print('Correlation with transformed variables:', df['log_value'].corr(df['log_age']))
+
+sns.lmplot(x='log_age', y='log_value', data=df)
+plt.show()
+```
+
+`@sct`
+
+```{python}
+Ex().has_equal_ast()
+success_msg("Well done!")
+```
