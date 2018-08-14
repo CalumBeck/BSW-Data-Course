@@ -291,10 +291,10 @@ for i in CoolShapes:
 ```
 The above code works like follows:
 
-- Assign the variable i to the first item in the CoolShapes list
-- Run the indented code, which in this case, prints whatever item i is assigned to
--Assign the variable i to the next item in the list
--Repeat the last 2 bullet points until the end of the list is reached
+- Assign the variable `i` to the first item in the CoolShapes list
+- Run the indented code, which in this case, prints whatever item `i` is assigned to
+- Assign the variable `i` to the next item in the list
+- Repeat the last 2 bullet points until the end of the list is reached
 
 
 `@instructions`
