@@ -279,7 +279,7 @@ key: 40da23b9da
 ```
 
 
-Now we're going to use a really useful tool, loops. Often we will need to do a similiar task multiple times, and it can easier to use a loop rather than write out multiple lines of very similiar code. 
+Now we're going to use a really useful tool, loops. Often we will need to do a similar task multiple times, and it can easier to use a loop rather than write out multiple lines of very similar code. 
 
 In this task, we are going to use a `for` loop to create a list of square numbers. 
 
@@ -298,6 +298,13 @@ Use the hint if you get stuck.
 `@hint`
 `List_of_Squares.append(i**2)` is the code to add the square of i to the list. Copy the example for loop, replacing the print statement with the append code. 
 Remember to use a `:` at the end of the for statement, and indent the code being looped over.
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
 
 `@sample_code`
 
