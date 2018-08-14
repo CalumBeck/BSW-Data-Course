@@ -3,7 +3,7 @@
   description: "This final chapter will give you a taste of the all-powerful Machine Learning. You will learn how to preprocess your data and apply a Decision Tree algorithm to predict the home planet of a given customer."
 ---
 
-## Find the value sum of a column
+## Import libraries for Machine Learning
 
 ```yaml
 type: NormalExercise 
@@ -14,56 +14,56 @@ key: 8a8f6f6a7c
 ```
 
 
-Now that you are familiar with the data, you can finally start exploring it in depth. 
+Your manager approached you stating that the system used for capturing customer's home planet has gone down. However, since other variables are not affected, maybe you can build a Decision Tree that would automatically predict the customer's planet of origin?
 
-Your manager has asked to find the total value of all the transactions on Mars that took place during the day. You can do this by using the `sum()` method on the `lifetime_value` column.
+Machine Learning is a complex and difficult science that takes years to master. Luckily, there are plenty of libraries that make it easy to implement a basic model without much prior training.
+
+We will focus on the `sklearn` library that contains all the necessary functions for a Machine Learning project.
 
 
 `@instructions`
-1) Select the `lifetime_value` column of `df`
+1) Select the `tree` module from the sklearn library and import the `DecisionTreeClassifier`
 
-2) Apply the `sum()` method
+2) Select the `metrics` module from the `sklearn` library and import `accuracy_score`
 
-3) Assign the calculation to the variable `total_value`
-
-4) Print the results
-
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-import pandas as pd
-df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-```
+The code to import the `train_test_split` functions has already been written for you.
 
 `@sample_code`
 
 ```{python}
-#Calculate the total value
-____ = df['____'].____
+#Import function to divide your data into training and learning parts from the cross_validation module of sklearn library
+from sklearn.cross_validation import train_test_split
 
-#Print out the results
-print(____)
+#Import the Decision Tree algorithm from the tree module
+from sklearn.____ import ____
+
+#Import function to test the accuracy of your prediction
+from ____.____ import ____
 ```
 
 `@solution`
 
 ```{python}
-total_value = 22005
+#Import function to divide your data into training and learning parts
+from sklearn.cross_validation import train_test_split
+
+#Import the Decision Tree algorithm
+from sklearn.tree import DecisionTreeClassifier 
+
+#Import function to test the accuracy of your prediction
+from sklearn.metrics import accuracy_score
 ```
 
 `@sct`
 
 ```{python}
-test_object('total_value')
-success_msg("Good work! You can now report a profit of $22005 for the day!")
+Ex().has_equal_ast()
+success_msg("Now you are ready to kick things off, good work!")
 ```
 
 ---
 
-## Find the correlation
+## Separate the dependent variable
 
 ```yaml
 type: NormalExercise 
@@ -74,24 +74,13 @@ key: 1aa751294c
 ```
 
 
-Your manager is convinced there is positive correlation between customer's age and their lifetime value. This means that the independent variable of age influences the dependent variable of profit. In other words, the older the customer, the more profit the bank receives from doing business with them. 
-
-This dependency could exist for a variety of reasons. Also, correlation does not always mean causation, but the relationship is interesting to explore nonetheless.
-
-Your task is to investigate the manager's hypothesis further. 
-
-We will use the `corr()` pandas function to see if your manager is right.
+The second task is to divide your data into two sets: one containing the dependent variable (if a person was born on Earth or Mars) that you want to predict, the other containing the features that will be used to predict the class of the dependent variable.
 
 
 `@instructions`
-1) Use the `corr()` function to find the correlation between `age` and `lifetime_value'`
+1) Use the `drop` method on your data to delete the `home_planet` column. This will be assigned to the variable `x`
 
-2) Assign the code to a variable `correlation`
-
-3) Print the new variable
-
-`@hint`
-
+2) Select the `home_planet` column only and assign it to the variable `y`
 
 `@pre_exercise_code`
 
@@ -103,33 +92,33 @@ df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datas
 `@sample_code`
 
 ```{python}
-#Find the correlation between the two variables
-____ = df['age'].___(df['lifetime_value'])
+#Keep all columns except the home_planet one
+x = df.drop(['____'], axis=1)
 
-#Print out the results
-print(_____)
+#Select the home_planet column only
+____ = df['home_planet']
 ```
 
 `@solution`
 
 ```{python}
-#Find the correlation between the two variables
-correlation = df['age'].corr(df['lifetime_value'])
+#Keep all columns except the home_planet one
+x = df.drop(['home_planet'], axis=1)
 
-#Print out the results
-print(correlation)
+#Select the home_planet column only
+y = df['home_planet']
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Looks like your manager's intuition was right and now you have some empirical evidence to support it!")
+success_msg("Good job!")
 ```
 
 ---
 
-## Split your data
+## Transform the data
 
 ```yaml
 type: NormalExercise 
@@ -140,11 +129,9 @@ key: 6c98c363ad
 ```
 
 
-Your preliminary analysis looks very promising! However, do you remember when we looked at the distribution of the data in Chapter 2? Both, `age` and `lifetime_value` variables are skewed to the right and this is most definitely affecting our findings. 
+The next step is to split your data into a training and testing sets.
 
-Worry not! We can fix this by transforming the variables. To do this we will apply the numpy `log()` function to all the data points in the two columns. 
-
-Your collegue has supplied you with a sample visualization code to illustrate the changes the transformations make. Take some time to review the output charts once you complete the instructions below.
+This means that your model will take the training features `x` and learn the outcomes of each permutation by looking at `y`.
 
 
 `@instructions`
@@ -199,53 +186,54 @@ key: fa17f9a513
 ```
 
 
-Now comes the fun part! You need to initialize a Decision Tree model and pass the training data to it, so it can learn the relevant features.
-
-Note that you are also passing the dependent variables labels with `y_train`. This means that you are solving a `supervised learning` problem.
+Now that the variables are transformed, it is time to give another shot at finding the correlation between them. Since the distribution of the transformed variables is closer to a normal one, the assumption is that the correlation coefficient should have greater accuracy.
 
 
 `@instructions`
-1) Use the `DecisionTreeClassifer` to initiate the model. This will be assigned to the variable `dt`
+1) Use the `corr()` function to find the correlation between the transformed values
 
-2) Use the `fit` method on `dt` and pass the training variables, so that your model can learn
+2) Assign the code to the variable `new_correlation`
+
+3) Print the newly assigned variable
+
+`@hint`
+
 
 `@pre_exercise_code`
 
 ```{python}
 import pandas as pd
-from sklearn.cross_validation import train_test_split
-from sklearn.tree import DecisionTreeClassifier 
+import numpy as np
 df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-x = df.drop(['home_planet'], axis=1)
-y = df['home_planet']
-x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2)
+df['log_age'] = np.log(df['age'])
+df['log_value'] = np.log(df['lifetime_value'])
 ```
 
 `@sample_code`
 
 ```{python}
-#Initiate the model
-dt = ____()
+#Find the new correlation
+____ = df['log_value'].____(df['log_age'])
 
-#Fit the model around the training variables
-dt.____(x_train, y_train)
+#Print out the result
+print(____)
 ```
 
 `@solution`
 
 ```{python}
-#Initiate the model
-dt = DecisionTreeClassifier()
+#Find the new correlation
+new_correlation = df['log_value'].corr(df['log_age'])
 
-#Fit the model around the training variables
-dt.fit(x_train, y_train)
+#Print out the result
+print(new_correlation)
 ```
 
 `@sct`
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Great, now you have a an intelligent model!")
+success_msg("Great! By transforming the variables, you were able to improve the coefficient from 0.2 to 0.329!")
 ```
 
 ---
