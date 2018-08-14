@@ -58,7 +58,7 @@ total_value = 22005
 
 ```{python}
 test_object('total_value')
-success_msg("Good work! You can now report a profit of $22005 for the day!")
+success_msg("Good work! You can now report a profit of 22005 Markles for the day!")
 ```
 
 ---
@@ -203,9 +203,6 @@ Now that the variables are transformed, it is time to give another shot at findi
 
 3) Print the newly assigned variable
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -330,9 +327,6 @@ Awesome! As SEB's Mars data analyst you have used `sum()` to find the total valu
 
 `@instructions`
 Click `Submit Answer` once you are ready to proceed!
-
-`@hint`
-
 
 `@pre_exercise_code`
 
