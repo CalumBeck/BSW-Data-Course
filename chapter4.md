@@ -378,7 +378,15 @@ key: 1e14d14f61
 ```
 
 
+A new casino has opened on mars, and they need your help! 
 
+In one of the games, a customer pays 1 markle, the local martian currency, to roll 2 dice. If they can roll a 10 or higher, they win 5 markles. However, the low gravity on Mars means that the dice keep bouncing away! 
+
+The casino would like to trial a computer version, in which 2 random numbers between 1 and 6 are generated instead of using real dice. A customer called Zworby has volunteered to trial the game, and would like to play 100  times.
+
+You will need to make use of a random number generator. A useful way to learn how to do things is use stack overflow. 
+
+ [https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9](url)
 
 
 `@instructions`
