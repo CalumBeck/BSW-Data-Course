@@ -88,6 +88,13 @@ If you forgot how to multiply, feel free to use the hint!
 `@hint`
 To multiply 2 variables, called `a` and `b`, we use `a * b`
 
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
 `@sample_code`
 
 ```{python}
@@ -101,6 +108,7 @@ y = 2
 print (x + y)
 
 #Multiply x and y
+
 ```
 
 `@solution`
@@ -145,6 +153,16 @@ A really useful way to keep track of data, is to make a list. Lists are a series
 `@instructions`
 Make your own list called Employees, with 3 strings for your employee names. Your current employees are Jerome, Sarah and Pete.
 
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
+
 `@sample_code`
 
 ```{python}
@@ -152,6 +170,7 @@ Make your own list called Employees, with 3 strings for your employee names. You
 CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
 #List of Employees: Jerome, Sarah and Pete
+
 ```
 
 `@solution`
@@ -294,7 +313,7 @@ for i in CoolShapes:
 Employees = ['Jerome', 'Sarah', 'Pete', 'Heather']
 
 #Fill the gaps in the to make a for loop which prints the strings in the Employees list
-for i in _:
+for i in ____:
   print (_)
 ```
 
