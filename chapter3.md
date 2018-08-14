@@ -14,19 +14,16 @@ key: 108d33a707
 ```
 
 
-Now that you are familiar with the data, you can finally start exploring it in depth. 
+We will begin by getting some very broad information about the DataFrame `df`. For this purpose you will use the `info()` method.
 
-Your manager has asked to find the total value of all the transactions on Mars that took place during the day. You can do this by using the `sum()` method on the `lifetime_value` column.
+After you submit the solution, take some time to read the success message that will help you interpret the results.
 
 
 `@instructions`
-1) Select the `lifetime_value` column of `df`
+Use the `info()` method on `df`
 
-2) Apply the `sum()` method
+`@hint`
 
-3) Assign the calculation to the variable `total_value`
-
-4) Print the results
 
 `@pre_exercise_code`
 
@@ -38,24 +35,21 @@ df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datas
 `@sample_code`
 
 ```{python}
-#Calculate the total value
-____ = df['____'].____
-
-#Print out the results
-print(____)
+#Your code below
+df.____()
 ```
 
 `@solution`
 
 ```{python}
-total_value = 22005
+df.info()
 ```
 
 `@sct`
 
 ```{python}
-test_object('total_value')
-success_msg("Good work! You can now report a profit of $22005 for the day!")
+Ex().has_equal_ast()
+success_msg("Success! You can see that the DataFrame has 110 rows of data and 6 columns. Furthermore, you can see the column names and the variable types that populate them.")
 ```
 
 ---
@@ -86,9 +80,6 @@ Make sure you print the variable and take some time to interpret the output.
 2) Assign your code to a variable called `description`
 
 3) Print out the variable `description`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -152,9 +143,6 @@ After you submit the exercises, let's take some time to interpret the results.
 A histogram of the `age` variable has already been created for you as an example. 
 
 3) Display the histogram by using `plt.show()`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -229,9 +217,6 @@ To mitigate this issue in your data you can define a function! With the right in
 2) Assign the correct zones
 
 3) Use the `apply` method on the `zone` column of `df` and assign the results to a new column called `new_zones`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
