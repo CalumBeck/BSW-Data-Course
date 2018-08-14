@@ -1,6 +1,6 @@
 ---
-  title: "Analyse the data"
-  description: "In this chapter you will perform the main analysis work. This includes calculating the total sum of a column, transforming data and finding correlation between variables."
+  title: "Explore the data"
+  description: "Before any serious analytics can begin, it is important to understand your data better. We do this by performing Exploratory Data Analysis (EDA). A few of the available EDA methods will be covered in this chapter."
 ---
 
 ## Lets get some info!
@@ -27,9 +27,6 @@ Your manager has asked to find the total value of all the transactions on Mars t
 3) Assign the calculation to the variable `total_value`
 
 4) Print the results
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -90,9 +87,6 @@ We will use the `corr()` pandas function to see if your manager is right.
 
 3) Print the new variable
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -151,9 +145,6 @@ Your collegue has supplied you with a sample visualization code to illustrate th
 1) Apply the `log()` function to the `age` column and assign the results to a new column called `log_age`
 
 2) Do the same for the `lifetime_value` column. Call the new column `log_value`
-
-`@hint`
-
 
 `@pre_exercise_code`
 
@@ -233,9 +224,6 @@ Now that the variables are transformed, it is time to give another shot at findi
 
 3) Print the newly assigned variable
 
-`@hint`
-
-
 `@pre_exercise_code`
 
 ```{python}
@@ -295,9 +283,6 @@ You also engaged in some data engineering by creating a new column with transact
 
 `@instructions`
 Click `Submit Answer` once you are ready to proceed!
-
-`@hint`
-
 
 `@pre_exercise_code`
 
