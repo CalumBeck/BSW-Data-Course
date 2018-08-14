@@ -198,9 +198,14 @@ key: a97d1d137c
 ```
 
 
-The Bank would like to offer a premium service to its high value customers, as well as notify customers in zone 3 that their local branch has moved. To do this, a colleague needs a list of the index of customers with an expected lifetime value over 450, as well as a list of every customer in zone 3.
+Oh no! Your colleague has just informed you that an error has been spotted in the backend processes of the bank. This error has led to transaction zones being mixed up. For example, zone 1 should have been labeled as zone 2, zone 3 as 4 and so on:
 
-They have asked you to create these lists for them.
+`Zone 1 --> 2`
+`Zone 2 --> 1`
+`Zone 3 --> 4`
+`Zone 4 --> 3`
+
+To mitigate this issue in your data you can define a function! With the right instructions, it will fix the problem quickly.
 
 
 `@instructions`
