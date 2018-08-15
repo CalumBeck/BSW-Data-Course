@@ -63,7 +63,7 @@ success_msg("Well done!")
 
 ---
 
-## Insert exercise title here
+## We've lost the plot
 
 ```yaml
 type: NormalExercise 
