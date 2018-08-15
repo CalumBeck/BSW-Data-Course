@@ -170,6 +170,7 @@ plt.show()
 plt.figure()
 sns.distplot(df['log_value'])
 plt.show()
+
 ```
 
 `@solution`
@@ -189,6 +190,7 @@ plt.show()
 plt.figure()
 sns.distplot(df['log_value'])
 plt.show()
+
 ```
 
 `@sct`
