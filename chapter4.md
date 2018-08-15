@@ -147,10 +147,10 @@ Your collegue has supplied you with a sample visualization code to illustrate th
 
 ```{python}
 import pandas as pd
-from sklearn.cross_validation import train_test_split
+import numpy as np
 df = pd.read_csv('https://assets.datacamp.com/production/repositories/2588/datasets/73d9f6626d0059203da53d733f5f781c4c9aed32/mars_data.csv')
-x = df.drop(['home_planet'], axis=1)
-y = df['home_planet']
+import seaborn as sns
+import matplotlib.pyplot as plt
 ```
 
 `@sample_code`
