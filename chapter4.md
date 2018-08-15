@@ -140,6 +140,9 @@ Your collegue has supplied you with a sample visualization code to illustrate th
 
 2) Do the same for the `lifetime_value` column. Call the new column `log_value`
 
+`@hint`
+
+
 `@pre_exercise_code`
 
 ```{python}
@@ -153,15 +156,39 @@ y = df['home_planet']
 `@sample_code`
 
 ```{python}
-#Split your data
-x_train, x_test, y_train, y_test = train_test_split(____,____,test_size=____)
+#Transform the age variable 
+df['log_age'] = np.____(df['age'])
+
+#Transform the lifetime_value variable 
+df['____'] = np.log(df['____'])
+
+#The code below will help you visualise the transformed variables
+plt.figure()
+sns.distplot(df['log_age'])
+plt.show()
+
+plt.figure()
+sns.distplot(df['log_value'])
+plt.show()
 ```
 
 `@solution`
 
 ```{python}
-#Split your data
-x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2)
+#Transform the age variable 
+df['log_age'] = np.log(df['age'])
+
+#Transform the lifetime_value variable 
+df['log_value'] = np.log(df['lifetime_value'])
+
+#The code below will help you visualise the transformed variables
+plt.figure()
+sns.distplot(df['log_age'])
+plt.show()
+
+plt.figure()
+sns.distplot(df['log_value'])
+plt.show()
 ```
 
 `@sct`
