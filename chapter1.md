@@ -27,16 +27,6 @@ the IPython shell so that you can see it.  Hit run code to see how it works, the
 `@instructions`
 Calculate `12 + 9`, and tell python to print the answer, just like the examples already written.
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -48,8 +38,6 @@ print (5 + 5)
 print (8 * 4)
 
 #Write your own sum on the next line
-
-
 ```
 
 `@solution`
@@ -100,13 +88,6 @@ If you forgot how to multiply, feel free to use the hint!
 `@hint`
 To multiply 2 variables, called `a` and `b`, we use `a * b`
 
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -120,8 +101,6 @@ y = 2
 print (x + y)
 
 #Multiply x and y
-
-
 ```
 
 `@solution`
@@ -166,16 +145,6 @@ A really useful way to keep track of data, is to make a list. Lists are a series
 `@instructions`
 Make your own list called Employees, with 3 strings for your employee names. Your current employees are Jerome, Sarah and Pete.
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -183,8 +152,6 @@ Make your own list called Employees, with 3 strings for your employee names. You
 CoolShapes = ['Circle', 'Rhombus', 'Mobius Strip']
 
 #List of Employees: Jerome, Sarah and Pete
-
-
 ```
 
 `@solution`
@@ -361,7 +328,7 @@ In this task, we are going to use a `for` loop to create a list of square number
 
 A square number can be made using `x**2`, which would give the square of `x`. 
 
-We will also use the `range()` function, which produces a list of numbers, starting from 0, up to the number written inside the brackets. It is useful if you want to tell  a for loop to iterate a certain amount of times.
+We will also use the `range()` function, which produces a list of numbers, starting from 0, up to, but not including, the number written inside the brackets. It is useful if you want to tell  a for loop to iterate a certain amount of times.
 
 
 `@instructions`
@@ -374,6 +341,13 @@ Use the hint if you have forgotten how to append, or get stuck.
 `@hint`
 `List_of_Squares.append(i**2)` is the code to add the square of i to the list. Copy the example for loop, replacing the print statement with the append code. 
 Remember to use a `:` at the end of the for statement, and indent the code being looped over.
+
+`@pre_exercise_code`
+
+```{python}
+
+```
+
 
 `@sample_code`
 
