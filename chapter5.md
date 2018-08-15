@@ -149,11 +149,11 @@ The casino wants to know if they've made any money from Zworby.
 
 Zworby has rolled 2 dice 100 times, using the system you have created. The results have been added to a list called Dicerolls already, so you don't need to make another list. Print out Dicerolls if you don't believe it. 
 
-The casino would like to know if they have made any money. The rules of the game are that Zworby pays 1 markle each time she rolls 2 dice, and if the total is 10 or higher, she wins 5 markles. 
+The casino would like to know if they have made any money. The rules of the game are that Zworby pays 1 markle each time she rolls 2 dice, and if the total is 10 or higher, she wins 6 markles. 
 
 There is also additional costs to the casino, of 0.05 markles per double dice roll, which cover things such as electricity bills and advertising for the game. So the total cost for 100 double rolls is 5 markles. 
 
-If you complete this exercise, try to work out if the casino is statistically likely to make or lose money on this game.
+If you complete this exercise, try to work out if the casino is statistically likely to make or lose money on this game. If they ran this 10,000 times instead of 100, how much do you think
 
 
 `@instructions`
@@ -161,7 +161,7 @@ Work out the total profit, or loss that the casino has made from the trial, usin
 
 Assign this to a variable called 'profit', and print this variable. 
 
-You may wish to make use of a counter. You can add 1 to a variable, in a loop for example, using `x += 1` which will add 1 to the value of `x` each time it is run.
+There are a few ways you can do this. You may wish to make use of a counter. You can add 1 to a variable, in a loop for example, using `x += 1` which will add 1 to the value of `x` each time it is run.
 
 `@hint`
 Make a variable to count the number of times Zworby rolls a 10, 11, or 12. Set this to 0. Then make a for loop which goes through the Dicerolls list, adding 1 to the counter variable for each roll over 9, you can use an if statement for this. Finally, use this formula Profit = amount Zworby pays - amount Zworby wins - Additional costs to work out the profit made by the casino. You might want to go back to previous exercises on for loops and if statements for more help.
@@ -291,7 +291,7 @@ for i in Dicerolls:
         count += 1
         
 #Profit = amount Zworby pays - amount Zworby wins - Additional costs
-profit = 100 - count * 5 - 5
+profit = 100 - count * 6 - 5
 #print the profit made
 print (profit)
 ```
