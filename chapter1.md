@@ -334,7 +334,7 @@ We will also use the `range()` function, which produces a list of numbers, start
 `@instructions`
 Hit Run Code to see how the range function is used within the for loop.
 
-Write your own for loop, appending the square numbers up to 10 to the empty list created for you.
+Write your own for loop, appending the square numbers up to 9 to the empty list created for you.
 
 Use the hint if you have forgotten how to append, or get stuck.
 
@@ -352,7 +352,7 @@ Remember to use a `:` at the end of the for statement, and indent the code being
 `@sample_code`
 
 ```{python}
-#Prints the square numbers from 0 to 10
+#Prints the square numbers from 0 to 9
 for i in range(10):
     #This indented code is looped over
     print(i**2)
@@ -371,7 +371,7 @@ print (List_of_Squares)
 `@solution`
 
 ```{python}
-#Prints the square numbers from 0 to 10
+#Prints the square numbers from 0 to 9
 for i in range(10):
     print(i**2)
 
