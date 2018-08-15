@@ -133,3 +133,164 @@ plt.show()
 Ex().has_equal_ast()
 success_msg("The code is running smoothly! Fantastic fixing skills you have there.")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: ed4c231dbe   
+```
+
+
+The casino wants to know if they've made any money from Zworby. 
+
+Zworby has rolled 2 dice 100 times, using the system you have created. The results have been added to a list called Dicerolls already, so you don't need to make another list. Print out Dicerolls if you don't believe it. 
+
+The casino would like to know if they have made any money. The rules of the game are that Zworby pays 1 markle each time she rolls 2 dice, and if the total is 10 or higher, she wins 5 markles. 
+
+There is also additional costs to the casino, of 0.05 markles per double dice roll, which cover things such as electricity bills and advertising for the game. So the total cost for 100 double rolls is 5 markles.
+
+
+`@instructions`
+Work out the total profit, or loss that the casino has made from the trial, using the results contained in the Dicerolls list already made for you. Remember to include the additional costs.
+
+Assign this to a variable called 'profit', and print this variable. 
+
+You may wish to make use of a counter. You can add 1 to a variable, in a loop for example, using `x += 1` which will add 1 to the value of `x` each time it is run.
+
+`@hint`
+Make a variable to count the number of times Zworby rolls a 10, 11, or 12. Set this to 0. Then make a for loop which goes through the Dicerolls list, adding 1 to the counter variable for each roll over 9, you can use an if statement for this. Finally, use this formula Profit = amount Zworby pays - amount Zworby wins - Additional costs to work out the profit made by the casino. You might want to go back to previous exercises on for loops and if statements for more help.
+
+`@pre_exercise_code`
+
+```{python}
+Dicerolls = [9,
+ 7,
+ 6,
+ 8,
+ 6,
+ 9,
+ 10,
+ 6,
+ 7,
+ 8,
+ 5,
+ 11,
+ 9,
+ 8,
+ 9,
+ 3,
+ 7,
+ 8,
+ 4,
+ 11,
+ 8,
+ 6,
+ 6,
+ 8,
+ 2,
+ 10,
+ 11,
+ 6,
+ 7,
+ 7,
+ 11,
+ 9,
+ 8,
+ 5,
+ 3,
+ 3,
+ 2,
+ 2,
+ 8,
+ 8,
+ 9,
+ 8,
+ 6,
+ 9,
+ 4,
+ 10,
+ 7,
+ 8,
+ 8,
+ 5,
+ 2,
+ 7,
+ 7,
+ 5,
+ 5,
+ 4,
+ 7,
+ 4,
+ 7,
+ 8,
+ 8,
+ 11,
+ 6,
+ 5,
+ 4,
+ 9,
+ 2,
+ 8,
+ 10,
+ 7,
+ 4,
+ 9,
+ 4,
+ 9,
+ 10,
+ 8,
+ 7,
+ 8,
+ 7,
+ 8,
+ 7,
+ 7,
+ 9,
+ 9,
+ 6,
+ 7,
+ 3,
+ 7,
+ 11,
+ 12,
+ 9,
+ 7,
+ 8,
+ 6,
+ 7,
+ 6,
+ 10,
+ 12,
+ 6,
+ 7]
+```
+
+`@sample_code`
+
+```{python}
+
+```
+
+
+`@solution`
+
+```{python}
+count = 0
+for i in Dicerolls:
+    if i > 9:
+        count += 1
+#Profit = amount Zworby pays - amount Zworby wins - Additional costs
+profit = 100 - count * 5 - 5
+print (profit)
+```
+
+`@sct`
+
+```{python}
+
+```
+
