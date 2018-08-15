@@ -136,7 +136,7 @@ success_msg("The code is running smoothly! Fantastic fixing skills you have ther
 
 ---
 
-## Insert exercise title here
+## Profit profit profit
 
 ```yaml
 type: NormalExercise 
@@ -151,7 +151,9 @@ Zworby has rolled 2 dice 100 times, using the system you have created. The resul
 
 The casino would like to know if they have made any money. The rules of the game are that Zworby pays 1 markle each time she rolls 2 dice, and if the total is 10 or higher, she wins 5 markles. 
 
-There is also additional costs to the casino, of 0.05 markles per double dice roll, which cover things such as electricity bills and advertising for the game. So the total cost for 100 double rolls is 5 markles.
+There is also additional costs to the casino, of 0.05 markles per double dice roll, which cover things such as electricity bills and advertising for the game. So the total cost for 100 double rolls is 5 markles. 
+
+If you complete this exercise, try to work out if the casino is statistically likely to make or lose money on this game.
 
 
 `@instructions`
@@ -279,12 +281,18 @@ Dicerolls = [9,
 `@solution`
 
 ```{python}
+#Count variable to count the number of Zworby's winning rolls
 count = 0
+#for loop iterating over all the rolls
 for i in Dicerolls:
+  	#Winning rolls are those over 9
     if i > 9:
+      	#Add 1 to the count for each winning roll
         count += 1
+        
 #Profit = amount Zworby pays - amount Zworby wins - Additional costs
 profit = 100 - count * 5 - 5
+#print the profit made
 print (profit)
 ```
 
