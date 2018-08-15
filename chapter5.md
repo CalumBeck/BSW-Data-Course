@@ -151,9 +151,7 @@ Zworby has rolled 2 dice 100 times, using the system you have created. The resul
 
 The casino would like to know if they have made any money. The rules of the game are that Zworby pays 1 markle each time she rolls 2 dice, and if the total is 10 or higher, she wins 6 markles. 
 
-There is also additional costs to the casino, of 0.05 markles per double dice roll, which cover things such as electricity bills and advertising for the game. So the total cost for 100 double rolls is 5 markles. 
-
-If you complete this exercise, try to work out if the casino is statistically likely to make or lose money on this game. If they ran this 10,000 times instead of 100, how much do you think
+There is also additional costs to the casino, of 0.05 markles per double dice roll, which cover things such as electricity bills and advertising for the game. So the total cost for 100 double rolls is 5 markles.
 
 
 `@instructions`
@@ -300,4 +298,5 @@ print (profit)
 
 ```{python}
 Ex().has_printout(0)
+success_msg("You've completed the course! Great work, and good luck with any further Python endeavours. You can check out the skill tracks on this website for more Python courses to help you develop. As a bonus exercise, try to work out whether the casino is actually statistically likely to make any money on game with current rules. Remember 1 markle is payed per double roll, 6 are paid out if a 10 or higher is achieved, and there is additional costs of 0.05 markles per double roll")
 ```
