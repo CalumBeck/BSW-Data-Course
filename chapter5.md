@@ -299,6 +299,5 @@ print (profit)
 `@sct`
 
 ```{python}
-
+Ex().has_printout(0)
 ```
-
