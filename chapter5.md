@@ -28,16 +28,6 @@ Create a for loop, which generates 2 dice rolls, 100 times.
 
 For each pair of dice rolls, add their sum to the list created for you. So you end up with a list of 100 numbers, each number represents the sum of 2 dice rolls.
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{python}
-
-```
-
-
 `@sample_code`
 
 ```{python}
@@ -62,7 +52,6 @@ from random import randint
 #Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
 for i in range(100):
   Dicerolls.append(randint(1, 6) + randint(1, 6))
-
 ```
 
 `@sct`
@@ -95,32 +84,46 @@ key: 23bdd32abf
 `@pre_exercise_code`
 
 ```{python}
+
+```
+
+
+`@sample_code`
+
+```{python}
 #List of dice rolls
 Dicerolls = []
 
 #Make any neccesary imports here
 from random import randint
+import matplotlib.pyplot as plt
 
 #Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
 for i in range(100):
   Dicerolls.append(randint(1, 6) + randint(1, 6))
 
+#Create a histogram of dicerolls
+plt.hist(dicerolls)
+
+#Plot the histogram
+plot.show()
 ```
-
-`@sample_code`
-
-```{python}
-
-```
-
 
 `@solution`
 
 ```{python}
+#List of dice rolls
+Dicerolls = []
+
+#Make any neccesary imports here
+from random import randint
 import matplotlib.pyplot as plt
 
-x = Dicerolls
-plt.hist(x)
+#Create a for loop below to append the sum of 2 dice rolls to the Dicerolls list, 100 times.
+for i in range(100):
+  Dicerolls.append(randint(1, 6) + randint(1, 6))
+  
+plt.hist(Dicerolls)
 plt.show()
 ```
 
@@ -128,5 +131,5 @@ plt.show()
 
 ```{python}
 Ex().has_equal_ast()
-success_msg("Well done!")
+success_msg("The code is running smoothly! Fantastic fixing skills you have there.")
 ```
