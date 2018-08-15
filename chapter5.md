@@ -72,14 +72,14 @@ key: 23bdd32abf
 ```
 
 
-
+Your colleague has tried to plot a histogram for the dice rolling trial. However, the code just isn't working, you've been called in to figure it out, and fix the problem!
 
 
 `@instructions`
-
+Hit run code, and read the error message in the IPython shell. See if you can work out how to fix the code, and get it running smoothly. Keep hitting run code and trying to fix the error until the code is working, then submit your answer.
 
 `@hint`
-
+The bugs are on lines 13 and 16. Your hints are that capitals matter! and look at line 6 to see what your import is called. If you need more help, we also made a plot in exercise 3.3, can you replicate that here?
 
 `@pre_exercise_code`
 
